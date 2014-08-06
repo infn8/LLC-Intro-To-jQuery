@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Ladies Learning Code: Intro to HTML & CSS</title>
 
-    <!-- Theme-specific styles -->
+    <!-- Theme-specific styles 
     <link href='http://fonts.googleapis.com/css?family=Quicksand|Montserrat:400,700|Pacifico' rel='stylesheet' type='text/css'>
-    
+    -->
     <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
     <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="fonts/google-webfonts/stylesheet.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
     <link rel="stylesheet" href="css/theme-llc.css">
-    <!-- Workshop-specific styles -->
+    <!-- Workshop-specific styles 
     <link href="css/workshop.css" rel="stylesheet">
-
+    -->
     <!-- Takes care of CSS3 prefixes! -->
     <script src="prefixfree.min.js"></script>
 
@@ -918,9 +919,9 @@ At it's most basic, a rotator is a list of images that uses javascript to show o
 ```html
 &lt;div id="rotator">
     &lt;ul class="slides">
-        &lt;li>&lt;img src="content/rotator/image1.jpg" alt="First Slide">&lt;/li>
-        &lt;li>&lt;img src="content/rotator/image2.jpg" alt="Second Slide">&lt;/li>
-        &lt;li>&lt;img src="content/rotator/image3.jpg" alt="Third Slide">&lt;/li>
+        &lt;li>&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/li>
+        &lt;li>&lt;img src="img/rotator/image2.jpg" alt="Second Slide">&lt;/li>
+        &lt;li>&lt;img src="img/rotator/image3.jpg" alt="Third Slide">&lt;/li>
     &lt;/ul>
 &lt;/div>
 ```
@@ -949,9 +950,9 @@ You can see an example of this in the next slide
                     <div id="example-3">
                         <div id="rotator">
                             <ul class="rotator-items">
-                                <li><img src="content/rotator/image1.jpg" alt="First Slide"></li>
-                                <li><img src="content/rotator/image2.jpg" alt="Second Slide"></li>
-                                <li><img src="content/rotator/image3.jpg" alt="Third Slide"></li>
+                                <li><img src="img/rotator/image1.jpg" alt="First Slide"></li>
+                                <li><img src="img/rotator/image2.jpg" alt="Second Slide"></li>
+                                <li><img src="img/rotator/image3.jpg" alt="Third Slide"></li>
                             </ul>
                         </div>
                     </div>
@@ -1260,9 +1261,9 @@ It is super simple to make your slides able to link to another page, or even ano
 ```html
 &lt;div id="rotator">
     &lt;ul class="slides">
-        &lt;li>&lt;img src="content/rotator/image1.jpg" alt="First Slide">&lt;/li>
-        &lt;li>&lt;img src="content/rotator/image2.jpg" alt="Second Slide">&lt;/li>
-        &lt;li>&lt;img src="content/rotator/image3.jpg" alt="Third Slide">&lt;/li>
+        &lt;li>&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/li>
+        &lt;li>&lt;img src="img/rotator/image2.jpg" alt="Second Slide">&lt;/li>
+        &lt;li>&lt;img src="img/rotator/image3.jpg" alt="Third Slide">&lt;/li>
     &lt;/ul>
 &lt;/div>
 ```
@@ -1271,9 +1272,9 @@ Now let's just wrap those images in links using the ```&lt;a>``` tag in **HTML**
 ```html
 &lt;div id="rotator">
     &lt;ul class="slides">
-        &lt;li>&lt;a href="#section1">&lt;img src="content/rotator/image1.jpg" alt="First Slide">&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#section2">&lt;img src="content/rotator/image2.jpg" alt="Second Slide">&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#section3">&lt;img src="content/rotator/image3.jpg" alt="Third Slide">&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section1">&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section2">&lt;img src="img/rotator/image2.jpg" alt="Second Slide">&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section3">&lt;img src="img/rotator/image3.jpg" alt="Third Slide">&lt;/a>&lt;/li>
     &lt;/ul>
 &lt;/div>
 ```
@@ -1334,11 +1335,11 @@ We will take the rest of the time to work with you on your projects and make sur
     <script src="plugins/highlight/highlight.js"></script>    
     <script>hljs.initHighlightingOnLoad();</script>
 
-    <!-- Prettify -->
+    <!-- Prettify 
     <script src="plugins/prettify.js"></script>
     <script src="plugins/lang-css.js"></script>
     <script src="plugins/prism.js"></script>
-
+-->
     <script>
         var slideshow = new SlideShow();
 

@@ -19,6 +19,7 @@
     -->
     <!-- Takes care of CSS3 prefixes! -->
     <script src="prefixfree.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
 
 </head>
 
@@ -462,7 +463,7 @@ What do you want your **program** to do?  Because now we are at the point where 
         bottom: 0;
         height: 5px;
         background: #b1009a;
-        width: 100%;
+        width: 0%;
         left: 0;
 
 
@@ -474,22 +475,28 @@ What do you want your **program** to do?  Because now we are at the point where 
     }
 </style>
 <script>
-    $(document).ready(function() {
+    
+    jQuery(function($) {
         $ex = $('.example-1');
         $ll = $ex.find('.layline');
         $items = $ex.find('li');
-        $(window).bind('hashchange, load', function(){
-            $active = $items.filter('.active')
-            $ll.width($active.width() ).css('left', $active.position().left / Reveal.getScale());
-        });
+
+        moveLine = function(){
+            if($ex.is(':target .example')){
+                $active = $items.filter('.active')
+                $ll.width($active.width() ).css('left', $active.position().left );
+            }
+        }
+        window.onhashchange = moveLine;
+        $(window).bind('load', moveLine);
         $items.hover(function(){
             // Hover Over
             $active = $(this);
-            $ll.width($active.width() ).css('left', $active.position().left / Reveal.getScale());
+            $ll.width($active.width() ).css('left', $active.position().left );
         }, function(){
             // Hover Out
             $active = $items.filter('.active')
-            $ll.width($active.width() ).css('left', $active.position().left / Reveal.getScale());
+            $ll.width($active.width() ).css('left', $active.position().left );
         }).find('a').click(function(event) {
             /* Act on the event */
             event.preventDefault();

@@ -20,6 +20,24 @@
     <!-- Takes care of CSS3 prefixes! -->
     <script src="prefixfree.min.js"></script>
     <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('a[href^="#example"]').on('click', function(e){
+            e.preventDefault();
+            console.log('clicked');
+            var exampleNumber = $(this).attr('href').substr(9);
+            switch(exampleNumber){
+                case "1":
+                    alert("Hello World");
+                    break;
+                case "2":
+                    alert("Seriously, I got the new Peter Gabrial tape!");
+                    break;
+            }
+            return false;
+        });
+    });
+    </script>
 
 </head>
 
@@ -455,6 +473,10 @@ What do you want your **program** to do?  Because now we are at the point where 
     .example-1 li a{
         padding: 10px;
     }
+    .example-1 li a:hover{
+        padding: 10px;
+        color:#b109aa;
+    }
     .example-1 ul{
         margin: 0;
     }
@@ -481,9 +503,9 @@ What do you want your **program** to do?  Because now we are at the point where 
         $ll = $ex.find('.layline');
         $items = $ex.find('li');
 
-        moveLine = function(){
+        moveLine = function(target){
             if($ex.is(':target .example')){
-                $active = $items.filter('.active')
+                $active = $items.filter('.active');
                 $ll.width($active.width() ).css('left', $active.position().left );
             }
         }
@@ -495,11 +517,12 @@ What do you want your **program** to do?  Because now we are at the point where 
             $ll.width($active.width() ).css('left', $active.position().left );
         }, function(){
             // Hover Out
-            $active = $items.filter('.active')
+            $active = $items.filter('.active');
             $ll.width($active.width() ).css('left', $active.position().left );
         }).find('a').click(function(event) {
-            /* Act on the event */
             event.preventDefault();
+            $items.removeClass('active');
+            $(this).parent().addClass('active');
             return false;
         });
     });
@@ -614,8 +637,8 @@ Think of it this way.  If JavaScript is a language like english, then jQuery is 
 
                 </section>
                 <section class="slide">
-                <h1>jQuery </h1> 
-                <h2> Using jQuery. </h2>
+                <h2>jQuery </h2> 
+                <h3> Using jQuery. </h3>
 <p> You can include jQuery in your pages with one single line of HTML. </p>
 
 
@@ -625,7 +648,76 @@ Think of it this way.  If JavaScript is a language like english, then jQuery is 
 
 <p>In this code, there is a <code>&lt;script></code> tag, with a single <strong> attribute </strong> called <code>src</code> which tells the browser where to find the script.</p>
 <p>In our case, the script is named '<code>jquery-1.11.1.js</code>' and it is located in a subdirectory called '<code>js</code>'. </p>
+<p>
+Once the jQuery library is included on our page, we can start to make use of the magic of jQuery.
+</p>
+<!-- <p>In order for that to do what we want the jQuery file must be where we say it is.  
+</p>
+<h4>
+    To get the file on your computer we use the same process we would for ANY file... We download it.
+</h4>
+ -->                </section>
+                <section class="slide" data-markdown> 
+# You Already Know How To Use jQuery
 
+                </section>
+                <section class="slide" data-markdown>
+## jQuery
+### Using jQuery
+                    
+Because you already know how to select **HTML Elements** with **CSS Selectors**.
+
+```css
+    .menu-item { color : blue; } 
+/*       ^        ^       ^
+         |        |       └ The value of the CSS property is set to blue
+         |        └ The CSS property we're setting is color
+         └ HTML Elements with a class of 'menu-item' are selected
+*/
+```
+                </section>
+                <section class="slide" data-markdown>
+## jQuery
+### Using jQuery
+                    
+Because you already know how to select **HTML Elements** with **CSS Selectors**.
+
+```css
+    .menu-item { color : blue; }
+/*       ^        ^       ^
+         |        |       └ The value of the CSS property is set to blue
+         |        └ The CSS property we're setting is color
+         └ HTML Elements with a class of 'menu-item' are selected
+*/
+```
+That same code in jquery is done like this:
+```javascript
+    jQuery('.menu-item').css('color', 'blue');
+```
+                </section>
+                <section class="slide" data-markdown>
+## jQuery
+### Using jQuery
+                    
+Let's look at what is going on here:
+
+```javascript
+jQuery('.menu-item').css('color', 'blue');
+/* ^         ^        ^     ^        ^
+   |         |        |     |        └ The second css function parameter sets the css value
+   |         |        |     |        
+   |         |        |     └ The first css function parameter sets the css property
+   |         |        |     
+   |         |        └ The jquery function 'css' is called.  This lets us 
+   |         |          effect the css of the matched html elements
+   |         |
+   |         └ The parameter sent to the jquery function is a 'string' value
+   |           that takes the form of a css selector
+   | 
+   └ The jquery function. This is the super important part.  
+     this makes everything else here work.
+*/
+```
                 </section>
                 <!-- CURSOR -->
                 <section class="slide" data-markdown> 
@@ -657,7 +749,7 @@ To download jQuery find the link that says [Download the compressed, production 
 
 ![jQuery download page](./img/example_jquery_2.jpg)
 
-Right click that link and choose **Save Link As...** and choose the location on your computer where you are storing your Hackapalooza project.
+Right click that link and choose **Save Link As...** and choose the location on your computer where you are storing your project.
 
                 </section>
                 <section class="slide" data-markdown> 
@@ -713,7 +805,7 @@ Ok enough review let's start using jQuery!
 Using Sublime Text, or whatever text editor you are comfortable with & have been using so far for Hackapalooza, open up the source code for your page.  It is likely called **index.html**
                 </section>
                 <section class="slide"> 
-<h1> Using jQuery </h1>
+<h2> Using jQuery </h2>
 <h2> Step 1, include the jQuery file on your HTML page using a new tag called: </h2>
 <p> Locate the section of your html file called the **head** of the document.  it should look like this: </p>
 
@@ -819,7 +911,7 @@ The HTML items or your page that match your selector are added into something ca
 When you run a jQuery **method** the items in the **wrapped set** are the ones that will be altered or effected.
                 </section>
                 <section class="slide"> 
-<h1> jQuery Methods </h1>
+<h2> jQuery Methods </h2>
 <p> the jQuery library comes with many many MANY different methods.  We won't discuss all of them here but if you want to see them all, and how to use them, you can go to <a href="http://api.jquery.com" target-"_blank">api.jquery.com</a>.</p>
 <p>We will discuss a few methods here and a few more once we start making our rotator.</p>
 <ul>
@@ -990,10 +1082,10 @@ Click the big green download button and download the zip file.  Expand that zip 
 
                 </section>
                 <section class="slide">
-<h1>
+<h2>
     
 Add Flexslider to our project
-</h1>
+</h2>
 
 <p>
     
@@ -1078,7 +1170,7 @@ we will be writing code on our projects that will be individualized to our own n
 I will give example **HTML**, **CSS**, **JavaScript** and **jQuery** code but you will need to adapt that code to do *what you want to do for your project*.
                 </section>
                 <section class="slide"> 
-<h1> Next Steps </h1>
+<h2> Next Steps </h2>
 
 <p> The <strong> HTML </strong> </p>
 

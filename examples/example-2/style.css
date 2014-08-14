@@ -33,6 +33,7 @@ img.favourite {
 	width: 200px;
 	padding: 5px;
 	margin: 10px;
+	vertical-align: middle;
 }
 section.banner {
 	padding-top: 110px;

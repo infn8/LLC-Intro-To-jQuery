@@ -1509,25 +1509,14 @@ Add Flexslider to our project
 
 <p>
 	
-Go to your <strong>
-	
-index.html
-</strong>
- file on your hackapalooza project in <strong>
- sublime text</strong> and find this section:
+Go to your <strong> index.html </strong> file on your project in <strong> sublime text</strong> and find where we put the script linking to the jQuery library:
 </p>
 
 
-<pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
-&lt;script&gt;
-$(document).ready(function(){
-	// Add all jQuery code here.
-});
-&lt;&#47;&#115;cript&gt;
-</code></pre>
+<pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt; </code></pre>
 
 <p>
-	and we are going to put some new code in the middle of this so that it looks like this instead:
+	and we are going to put some new code after that so that it looks like this instead:
 </p>
 <pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script src="js/flexslider/jquery.flexslider-min.js"&gt;&lt;&#47;&#115;cript&gt;
@@ -1567,7 +1556,8 @@ $(document).ready(function(){
 &lt;&#47;&#115;cript&gt;
 </code></pre>
 
-<p> and it should be in the <code>&lt;head></code> of your hackapalooza project page. </p>
+<p> and it should be in the <code>&lt;head></code> of your project page. </p>
+<p>If you are having trouble you can just use the code in the <code>example-3</code> folder from the project zip.</p>
 
 				</section>
 				<section class="slide" data-markdown> 
@@ -1671,7 +1661,7 @@ Some of Flexslider's available options:
 * Animation Loop
 	* When you get to the last slide should you go back to the start?
 
-There are many more options, [see a complete list on this page](http://www.woothemes.com/flexslider/), but let's look at how to set them. 
+There are many more options, [see a complete list on this page](http://www.woothemes.com/flexslider/#gist9481310), but let's look at how to set them. 
 				</section>
 				<section class="slide" data-markdown>
 ## Using A Configuration Object with Flexslider

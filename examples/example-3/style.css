@@ -84,6 +84,7 @@ section.box h2, section.box h3 {
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 100;
 }
 .menu li {
 	display: inline-block;

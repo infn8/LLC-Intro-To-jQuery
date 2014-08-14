@@ -1,97 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Ladies Learning Code: Intro to HTML & CSS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Ladies Learning Code: Intro to HTML & CSS</title>
 
-    <!-- Theme-specific styles 
-    <link href='http://fonts.googleapis.com/css?family=Quicksand|Montserrat:400,700|Pacifico' rel='stylesheet' type='text/css'>
-    -->
-    <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
-    <link rel="stylesheet" href="slideshow.css">
-    <link rel="stylesheet" href="fonts/google-webfonts/stylesheet.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
-    <link rel="stylesheet" href="css/theme-llc.css">
-    <!-- Workshop-specific styles 
-    <link href="css/workshop.css" rel="stylesheet">
-    -->
-    <!-- Takes care of CSS3 prefixes! -->
-    <script src="prefixfree.min.js"></script>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('a[href^="#example"]').on('click', function(e){
-            e.preventDefault();
-            console.log('clicked');
-            var exampleNumber = $(this).attr('href').substr(9);
-            switch(exampleNumber){
-                case "1":
-                    alert("Hello World");
-                    break;
-                case "2":
-                    alert("Seriously, I got the new Peter Gabrial tape!");
-                    break;
-            }
-            return false;
-        });
-        $('body').on('click', '[href^="examples/"]', function(event) {
-            $(this).attr('target', '_blank'); // open examples in new tab.
-        });
-    });
-    </script>
+	<!-- Theme-specific styles 
+	<link href='http://fonts.googleapis.com/css?family=Quicksand|Montserrat:400,700|Pacifico' rel='stylesheet' type='text/css'>
+	-->
+	<!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
+	<link rel="stylesheet" href="slideshow.css">
+	<link rel="stylesheet" href="fonts/google-webfonts/stylesheet.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
+	<link rel="stylesheet" href="css/theme-llc.css">
+	<!-- Workshop-specific styles 
+	<link href="css/workshop.css" rel="stylesheet">
+	-->
+	<!-- Takes care of CSS3 prefixes! -->
+	<script src="prefixfree.min.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$('a[href^="#example"]').on('click', function(e){
+			e.preventDefault();
+			console.log('clicked');
+			var exampleNumber = $(this).attr('href').substr(9);
+			switch(exampleNumber){
+				case "1":
+					alert("Hello World");
+					break;
+				case "2":
+					alert("Seriously, I got the new Peter Gabrial tape!");
+					break;
+			}
+			return false;
+		});
+		$('body').on('click', '[href^="examples/"]', function(event) {
+			$(this).attr('target', '_blank'); // open examples in new tab.
+		});
+	});
+	</script>
 
 </head>
 
 <!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
 <body data-duration="30">
 
-    <!-- First/Intro slide -->
-    <header class="intro slide">
-        <img class="logo" src="img/logo-llc-152x85.png">
+	<!-- First/Intro slide -->
+	<header class="intro slide">
+		<img class="logo" src="img/logo-llc-152x85.png">
 
-        <div class="info">
-            <h1>
-                <span class="title-bg">Introduction</span><br>
-                <span class="title-bg">to jQuery</span><br>
-            </h1>
+		<div class="info">
+			<h1>
+				<span class="title-bg">Introduction</span><br>
+				<span class="title-bg">to jQuery</span><br>
+			</h1>
 
-            <img class="instructor-img" src="img/arron-gibson.jpg" alt="arron gibson">
-            <h2><span>with</span> Arron Gibson  <small> Director of Digital Projects @ <a style="color:#00afea" href="http://vivaandco.com" target="_blank"> Viva &amp; Co. </a></small> </h2>
-            <ul>
-                <li><i class="fa fa-envelope"></i><a href="mailto:arron@vivaandco.com">arron@vivaandco.com</li>
-                <li><i class="fa fa-desktop"></i><a href="http://arrongibson.com" target="_blank">arrongibson.com</a></li>
-                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/arrongibson" target="_blank">@arrongibson</a></li>
-                <li><i class="fa fa-github"></i><a href="https://github.com/infn8/" target="_blank">@infn8</a></li>
-            </ul>
-        </div>
-    </header>
+			<img class="instructor-img" src="img/arron-gibson.jpg" alt="arron gibson">
+			<h2><span>with</span> Arron Gibson  <small> Director of Digital Projects @ <a style="color:#00afea" href="http://vivaandco.com" target="_blank"> Viva &amp; Co. </a></small> </h2>
+			<ul>
+				<li><i class="fa fa-envelope"></i><a href="mailto:arron@vivaandco.com">arron@vivaandco.com</li>
+				<li><i class="fa fa-desktop"></i><a href="http://arrongibson.com" target="_blank">arrongibson.com</a></li>
+				<li><i class="fa fa-twitter"></i><a href="http://twitter.com/arrongibson" target="_blank">@arrongibson</a></li>
+				<li><i class="fa fa-github"></i><a href="https://github.com/infn8/" target="_blank">@infn8</a></li>
+			</ul>
+		</div>
+	</header>
 
-    <section class="main">
+	<section class="main">
 
-                <section class="slide" data-markdown>
+				<section class="slide" data-markdown>
 ## Checklist for this course
 
 You will Need:
 
 1. Your Laptop
 * The [Google Chrome Browser](http://chrome.com) 
-    * *Don't use Firefox, Safari, Opera or Internet Explorer*
+	* *Don't use Firefox, Safari, Opera or Internet Explorer*
 * Sublime Text
-    * This is an amazing text editor and you can [download it here](http://www.sublimetext.com/2)
+	* This is an amazing text editor and you can [download it here](http://www.sublimetext.com/2)
 * A download of the files we will be using
-    * You can [get a zip of those here](https://github.com/infn8/LLC-Intro-To-jQuery/archive/master.zip)
-        * Download that file and unzip the contents of it to your desktop.
-        * This is where we're going to keep our project and our work during this workshop.
-            * You *can* put this elsewhere on your computer if you like but it's up to you to remember where that is later in the workshop.
+	* You can [get a zip of those here](https://github.com/infn8/LLC-Intro-To-jQuery/archive/master.zip)
+		* Download that file and unzip the contents of it to your desktop.
+		* This is where we're going to keep our project and our work during this workshop.
+			* You *can* put this elsewhere on your computer if you like but it's up to you to remember where that is later in the workshop.
 * A **Sense of Adventure**!!!
 
 If you have all of this and the course has not started running yet and you're looking to do something cool you can [go here](https://github.com/infn8/LLC-Intro-To-jQuery/blob/jQuery-Demo/sublime-text-setup.md) to add some cool functionality to your Sublime Text install.  (Please, ONLY do this when the workshop is NOT running.)
 
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 
 ### What Is HTML?
 
@@ -103,9 +103,9 @@ Lists
 
 ```html
 &lt;ul>
-    &lt;li>List Item&lt;/li> 
-    &lt;li>List Item&lt;/li> 
-    &lt;li>List Item&lt;/li>
+	&lt;li>List Item&lt;/li> 
+	&lt;li>List Item&lt;/li> 
+	&lt;li>List Item&lt;/li>
 &lt;/ul> 
 ```
 
@@ -115,8 +115,8 @@ and images
 &lt;img src="http://www.fillmurray.com/300/300" alt="Placeholder Image" />
 ```
 
-                </section>
-                <section class="slide">
+				</section>
+				<section class="slide">
 
 <h2> By placing these items together on a page we get something that looks like this: </h2>
 
@@ -128,57 +128,57 @@ and images
 </ul> 
 <p><img src="http://www.fillmurray.com/300/300" alt="Placeholder Image" /></p>
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ### What Is CSS?
 
 CSS (Cascading Style Sheets) are the **style** of your document. They help control the look and feel of the document. You create **selectors** that target **HTML Elements** and then use **CSS Rules** to change the look and feel of your document.
 
 Selectors like:
 
-    p { /* CSS Rules Here */ } 
+	p { /* CSS Rules Here */ } 
 
 Which targets all paragraphs, or:
 
-    .rotator-slide { /* CSS Rules Here */ } 
+	.rotator-slide { /* CSS Rules Here */ } 
 
 Which targets *any* element with class="rotator-slide", or:
 
-    #rotator { /* CSS Rules Here */ } 
+	#rotator { /* CSS Rules Here */ } 
 
 Which targets *any* element with id="rotator".
-                    
-                </section>
-                <section class="slide">
+					
+				</section>
+				<section class="slide">
 <p>
-    
+	
 <strong>CSS Rules</strong> go inside the {curly brackets} that follow the **CSS Selector** and they look like this:
 </p>
 <pre><code> p {
-    font-size: 2em;
-    color: red;
+	font-size: 2em;
+	color: red;
 } </code></pre>
 <p> Which will apply the font size of <strong>2em</strong> and color of <strong>red</strong> to all paragraphs. </p>
 
 <p style="font-size: 2em; color: red;">This is a paragraph with the styles above applied to it.</p>
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ### What Is JS?
 
 JS (JavaScript) controls the **behavior** of your document. It allows you to do things such as animate items, hide or show items, react to user input and even process data and perform other general programming tasks.
 
 JS can look like this:
 
-    var myVariable = "Hello World";
+	var myVariable = "Hello World";
 
 That line will create a variable called **myVariable** and assign it a value of **Hello World** (without the quotes).
 
 The structure and syntax of the language of JavaScript is much more complex than either HTML or CSS.  
 
 This is because neither HTML nor CSS are full fledged programming languages.  Neither of them have **variables**, **functions**, **objects** or **control structures** such as **if** statements or **loops**.  JavaScript has *all* of these.
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 
 ## So what *are* **variables**, **functions**, **objects** and **control structures** such as **if** statements or **loops**?
 
@@ -186,8 +186,8 @@ They are the basic building blocks of programming!
 
 We can use these things to give sets of instructions to browsers that visit our webpages. 
 #### Let's look at some of these things now:
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Variables
 
 ### What *is* a variable?
@@ -198,16 +198,16 @@ A variable is a named memory location which contains some known or unknown quant
 
 At its most basic we make a variable when we give a **name** to a **value**.  So when we say:
 
-    var myVariable = "Hello World";
+	var myVariable = "Hello World";
 
 We are taking the value ```Hello World``` and giving it the name ```myVariable```.  
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Variable Types
 
 Variable **values** can be one of several different **types**.  The most basic is a **number**
 
-    var meaningOfLife = 42; // Whole numbers are called 'integers'
+	var meaningOfLife = 42; // Whole numbers are called 'integers'
 
 Javascript can do math with numbers.
 ```javascript
@@ -224,8 +224,8 @@ The calculations work the same whether the values are either numbers, or values 
  var endingValue = startingValue * multiplier;
  // 'endingValue' is still 10.
  ```
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Variable Types
 
 When you store any amount of text, like words or sentances for example, the variable type is a **string** value.
@@ -249,8 +249,8 @@ The javascript above adds **three** items together:
 
 "Hello" + " " + "World" = "Hello World"
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Variable Types
 
 Javascript understands stings as values that are wrapped in either 'single quotes'  or "double quotes".  
@@ -263,19 +263,19 @@ var fails     = 'This string value's the bomb!!!';                              
 var alsoWorks = "Then I said: 'That string value was the bomb!!!'.";
 var alsoFails = "Then I said: "That string value was the bomb!!!".";                                   
 /* ' /*         ^             ^
-                |             | 
-                |_____________| 
-                |
-                Javascript thinks the string ends with the apostrophe.
+				|             | 
+				|_____________| 
+				|
+				Javascript thinks the string ends with the apostrophe.
 
-                It is then expecting the command to end with a semicolon (;) 
-                This doesn't happen and the following Error is thrown:
-                
-                    "SyntaxError: missing ; before statement" 
+				It is then expecting the command to end with a semicolon (;) 
+				This doesn't happen and the following Error is thrown:
+				
+					"SyntaxError: missing ; before statement" 
 */
 ```
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Variable Types
 
 You can use the double quote mark (") inside a string that is **delimited** by double quotes by putting a backslash (\\) in front of it.
@@ -283,23 +283,23 @@ You can use the double quote mark (") inside a string that is **delimited** by d
 ```javascript
 var totallyWorks = "Then I said: \"No way you can do that!!!\".";
 /* ' /*            ^                                           ^
-                   |                                           | 
-                   |___________________________________________| 
-                   |
+				   |                                           | 
+				   |___________________________________________| 
+				   |
 Javascript sees a string starting and ending with the same symbol.
 
 No Error is thrown. 
 
 The variable totallyWorks is assigned a string value of:
 
-    Then I said: "No way you can do that!!!".
+	Then I said: "No way you can do that!!!".
 */
 ```
 We use the quote marks to **delimit** a string but that does not add the **value** of the quote mark to the **content** of the string.
 
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Exercise 1
 
 ### The Console:
@@ -308,20 +308,20 @@ The console is an interactive tool that a browser has for users and developers t
 
 ![The Console](img/the_console.jpg)
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Exercise 1
 
 ### The Console:
 In Chrome, to open the Console tab, do any of the following:
 
 * Use the keyboard shortcut: 
-    * ```&LT;COMMAND> + &LT;OPTION> + &LT;J>``` (MAC)
-    * ```&LT;CONTROL> + &LT;SHIFT> + &LT;J>``` (WINDOWS/LINUX).
+	* ```&LT;COMMAND> + &LT;OPTION> + &LT;J>``` (MAC)
+	* ```&LT;CONTROL> + &LT;SHIFT> + &LT;J>``` (WINDOWS/LINUX).
 * Or Select: ```View > Developer > JavaScript Console```.
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Exercise 1
 
 ### The Console:
@@ -329,8 +329,8 @@ In Chrome, to open the Console tab, do any of the following:
 Let's do that now.  Open your console by one of the those methods.  You will know you're at the right place when your screen's bottom half is now the console and this top part of the screen is much smaller.  When you're done you can close the console with the (x) button in the top right of it: 
 
 ![The Console](img/the_console_x.jpg)
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Exercise 1
 
 ### The Console:
@@ -347,8 +347,8 @@ Open your console and type a ```3``` followed by a ```0``` and hit ```&lt;ENTER>
 > 30
 < 30
 ```
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Exercise 1
 
 ### The Console:
@@ -365,8 +365,8 @@ Your input was the integer value of ```30``` and the **returned value** was also
 < 30
 ```
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Exercise 1
 
 ### The Console:
@@ -387,8 +387,8 @@ The **returned value** you should get is:
 This tells you that javascript got your message and assigned that value to ```myFirstVariable```.
 
 Now let's use that variable:
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Exercise 1
 
 ### The Console:
@@ -406,8 +406,8 @@ Then notice that your console displays:
 This is because we told the console to give us the value of the variable ```myFirstVariable``` which it did.  That value was the one we gave it of ```Hello World!```
 
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Exercise 1
 
 ### The Console:
@@ -426,27 +426,113 @@ Consider the following series of commands:
 ```
 
 This not only gives us 4 new **variables**, all with **integer values**, but it also gives us the knowledge that there are indeed eighty six thousand four hundred seconds in a day.
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Variable Types
 
 Variables that contain true / false values are called **booleans**
 
-    var isJavaScriptCool = true;
-    var isJavaScriptLame = false;
+	var isJavaScriptCool = true;
+	var isJavaScriptLame = false;
+				</section>
+				<section class="slide" data-markdown>
+## Variable Types
 
-Variable can even hold lists of values (the list values themselves being **types** like strings or booleans) in what is called an **array**
+Variables can even hold lists of values (the list values themselves being **types** like strings or booleans) in what is called an **array**
+```javascript
+var myFavoriteThings = [
+	"Raindrops On Roses",
+	"Whiskers On Kittens",
+];
+```
+The values in an array can then be accessed by their **numerical index**, a number that stars at ```0``` and rises by ```1``` with each entry.  
 
-    var myFavoriteThings = [
-        "Raindrops On Roses",
-        "Whiskers On Kittens",
-    ];
+The same end result as the code above could also be written like this:
+```javascript
+myFavoriteThings[0] = "Raindrops On Roses";
+myFavoriteThings[1] = "Whiskers On Kittens";
+```
+
+
+				</section>
+				<section class="slide" data-markdown>
+## Variable Types
+
+Another type of variable that can hold other variable inside it is caled an **object**. Like arrays, objects can hold other values inside of them.
+```javascript
+var vonTrappFamily = {
+	father : "Captain Georg von Trapp",
+	stepmother : "Maria von Trapp",
+	children : [
+		"Liesl von Trapp",
+		"Friedrich von Trapp",
+		"Louisa von Trapp",
+		"Brigitta von Trapp",
+		"Marta von Trapp",
+		"Gretl von Trapp",
+	]
+};
+```
+Notice how we use the curly braces ```{ }``` to denote an object and the square braces ```[ ]``` for an array.
+
+In the example above the object has 3 **properties** ```father, stepmother & children``` 
+
+
+				</section>
+				<section class="slide" data-markdown>
+## Variable Types
+
+The value of the property ```father``` is a **string** of text.
+
+The value of the property ```stepmother``` is a **string** of text.
+
+The value of the property ```children``` is a **array** of items, each of which is a **string** of text.
+
+The patern of an object is like this:
+
+```javascript
+var variableName = { propertyName : propertyValue, anotherPropertyName : another Value };
+/*                 |     |        |      |       |         |                 |         |
+                   |     |        |      |       |         |_________________|   curly brace 
+                   |     |        |      |       |                           |   closes object
+                   |     |        |      |       |          This can repeat for
+                   |     |        |      |       |          as many properties as you like.
+                   |     |        |      |       └ A comma (,) seperates properties
+                   |     |        |      └ The property value follows the colon.
+                   |     |        └ A colon (:) is used to seperate name from value
+                   |     └  The property name must start with a letter and contain no spaces
+                   └ The Curly brace starts the object.
+*/
+```
+
+				</section>
+				<section class="slide" data-markdown>
+## Variable Types
+
+Object values are accessed or set via a syntax called **dot notation**.  This means that we could say something like.
+```javascript
+vonTrappFamily.father = "Captain Georg von Trapp";
+```
+Or we could get the value of one of the children by accessing an array value inside an object property:
+```javascript
+var notAllowedChampagne = vonTrappFamily.children[0];
+```
+This would set the value of the variable ```notAllowedChampagne``` to the string ```Liesl von Trapp```.
+
+### The variables that live inside objects are called ```properties```
+
+They are still variables they are just called **properties**.
+
+				</section>
+				<section class="slide" data-markdown>
+## Variable Types
+
+There are *many* different types of variable types in javascript and many rules about how to write them.
 
 We will not go into an exhaustive list here but it is important that you understand that variables hold values and the values themselves have types.
 
-
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Ok now what?
 
 Now... we write code.
@@ -462,110 +548,110 @@ What do you want your **program** to do?  Because now we are at the point where 
 * When the mouse leaves, move the line back where it was.
 
 
-                </section>
-                <section class="slide" >
+				</section>
+				<section class="slide" >
  <p>Something like that might look like this:</p>
 
 
 <div class="example example-1">
 <ul>
-    <li><a href="#">Home</a></li>
-    <li class="active"><a href="#">About Us</a></li>
-    <li><a href="#">Media</a></li>
-    <li><a href="#">Advertise</a></li>
-    <li><a href="#">Contact Us</a></li>
+	<li><a href="#">Home</a></li>
+	<li class="active"><a href="#">About Us</a></li>
+	<li><a href="#">Media</a></li>
+	<li><a href="#">Advertise</a></li>
+	<li><a href="#">Contact Us</a></li>
 </ul>
 <div class="layline"></div>
 </div>
 <style>
-    
-    .example-1{
-        position: relative;
-    }
-    .example-1 li{
-        display: inline-block;
-    }
-    .example-1 li a{
-        padding: 10px;
-    }
-    .example-1 li a:hover{
-        padding: 10px;
-        color:#b109aa;
-    }
-    .example-1 ul{
-        margin: 0;
-    }
-    .example-1 .layline{
-        position: absolute;
-        bottom: 0;
-        height: 5px;
-        background: #b1009a;
-        width: 0%;
-        left: 0;
+	
+	.example-1{
+		position: relative;
+	}
+	.example-1 li{
+		display: inline-block;
+	}
+	.example-1 li a{
+		padding: 10px;
+	}
+	.example-1 li a:hover{
+		padding: 10px;
+		color:#b109aa;
+	}
+	.example-1 ul{
+		margin: 0;
+	}
+	.example-1 .layline{
+		position: absolute;
+		bottom: 0;
+		height: 5px;
+		background: #b1009a;
+		width: 0%;
+		left: 0;
 
 
-        -webkit-transition: all 800ms ease-in-out;
-        -moz-transition: all 800ms ease-in-out;
-        -ms-transition: all 800ms ease-in-out;
-        -o-transition: all 800ms ease-in-out;
-        transition: all 800ms ease-in-out;
-    }
+		-webkit-transition: all 800ms ease-in-out;
+		-moz-transition: all 800ms ease-in-out;
+		-ms-transition: all 800ms ease-in-out;
+		-o-transition: all 800ms ease-in-out;
+		transition: all 800ms ease-in-out;
+	}
 </style>
 <script>
-    
-    $(function() {
-        $ex = $('.example-1');
-        $ll = $ex.find('.layline');
-        $items = $ex.find('li');
+	
+	$(function() {
+		$ex = $('.example-1');
+		$ll = $ex.find('.layline');
+		$items = $ex.find('li');
 
-        moveLine = function(target){
-            if($ex.is(':target .example')){
-                $active = $items.filter('.active');
-                $ll.width($active.width() ).css('left', $active.position().left );
-            }
-        }
-        window.onhashchange = moveLine;
-        $(window).bind('load', moveLine);
-        $items.hover(function(){
-            // Hover Over
-            $active = $(this);
-            $ll.width($active.width() ).css('left', $active.position().left );
-        }, function(){
-            // Hover Out
-            $active = $items.filter('.active');
-            $ll.width($active.width() ).css('left', $active.position().left );
-        }).find('a').click(function(event) {
-            event.preventDefault();
-            $items.removeClass('active');
-            $(this).parent().addClass('active');
-            return false;
-        });
-    });
+		moveLine = function(target){
+			if($ex.is(':target .example')){
+				$active = $items.filter('.active');
+				$ll.width($active.width() ).css('left', $active.position().left );
+			}
+		}
+		window.onhashchange = moveLine;
+		$(window).bind('load', moveLine);
+		$items.hover(function(){
+			// Hover Over
+			$active = $(this);
+			$ll.width($active.width() ).css('left', $active.position().left );
+		}, function(){
+			// Hover Out
+			$active = $items.filter('.active');
+			$ll.width($active.width() ).css('left', $active.position().left );
+		}).find('a').click(function(event) {
+			event.preventDefault();
+			$items.removeClass('active');
+			$(this).parent().addClass('active');
+			return false;
+		});
+	});
 </script>
 <p></p>
 <p>The example above illustrates what a short series of commands can do.</p>
 <p>Sometimes, when we have a series of commands that we run often, rather that writing out the same line, or lines, of code many times through out our program, we will create something called a <strong> function </strong> </p>
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 
 ## JavaScript Functions
 
 if a variable is a **name** for a **value**, then a function is a **name** for a set of commands or instructions.  For example:
 ```javascript
 function sayHello(){
-    /*
-    There can be many commands here in between the two {curly brackets}
-    Let's make the first command an alert to the user.
-    */ 
-    alert("Hello World");
+	/*
+	There can be many commands here in between the two {curly brackets}
+	Let's make the first command an alert to the user.
+	*/ 
+	alert("Hello World");
 }
 ```
 This creates a new **function** called "sayHello" which, when invoked, will execute the **alert** function that comes built into javascipt.
 
 The **alert** function is a **Built In Function** and the **sayHello** function is a **User Defined Function**.  The only difference between them is that you don't have to write a built in function, it comes for free as a part of JavaScript.
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 
 ## JavaScript Functions
 
@@ -577,7 +663,7 @@ Using the code from our previous slide:
 
 ```javascript
 function sayHello(){
-    alert("Hello World");
+	alert("Hello World");
 }
 ```
 We notice that the ```sayHello()``` function has empty parenthesis () while the ```alert()``` function has the **string** value "Hello World" in the parenthesis ().
@@ -586,8 +672,8 @@ We notice that the ```sayHello()``` function has empty parenthesis () while the 
 This introduces an important concept with functions called **parameters**.
 
  
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## JavaScript Functions
 ### Function Parameters
 
@@ -595,7 +681,7 @@ This introduces an important concept with functions called **parameters**.
 
 ```javascript
 function sayAnything(message){
-    alert(message);
+	alert(message);
 }
 ```
 
@@ -606,28 +692,28 @@ sayAnything("Check out my cool new boombox!");
 ```
 Which would cause the browser to pop up that message. [Or any other message we wanted to say](#example_2).
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## JavaScript Functions
-                    
+					
 The general pattern looks like this:
 
 ```javascript
 myCustomFunction(parameter1, parameter2, parameterN);
 /*     |              |           |          |
-       |              |           |          └ You can have as many 
-       |              |           |            parameters as you need.
-       |              |           └ The second parameter of the function.
-       |              └ The first parameter of the function.
-       └ The name of your function.
+	   |              |           |          └ You can have as many 
+	   |              |           |            parameters as you need.
+	   |              |           └ The second parameter of the function.
+	   |              └ The first parameter of the function.
+	   └ The name of your function.
 
 */
 
 
 ```
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## JavaScript Functions
 
 A function is one of the most powerful tools in JavaScript and one of the most powerful functions you will ever use is this one:
@@ -635,8 +721,8 @@ A function is one of the most powerful tools in JavaScript and one of the most p
 ```javascript
 jQuery();
 ```
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## JavaScript Functions
 
 A function is one of the most powerful tools in JavaScript and one of the most powerful functions you will ever use is this one:
@@ -650,70 +736,49 @@ jQuery is a JavaScript **library**. Meaning that it is a set of pre written code
 
 Think of it this way.  If JavaScript is a language like english, then jQuery is like a dictionary.  It makes working with the language easier. 
 
-                </section>
-                <section class="slide">
-                <h2>jQuery </h2> 
-                <h3> Using jQuery. </h3>
-<p> You can include jQuery in your pages with one single line of HTML. </p>
-
-
-
-
-<pre><code class="HTML"> &lt;script src="js/jquery-1.11.1.js">&lt;/script></code></pre>
-
-<p>In this code, there is a <code>&lt;script></code> tag, with a single <strong> attribute </strong> called <code>src</code> which tells the browser where to find the script.</p>
-<p>In our case, the script is named '<code>jquery-1.11.1.js</code>' and it is located in a subdirectory called '<code>js</code>'. </p>
-<p>
-Once the jQuery library is included on our page, we can start to make use of the magic of jQuery.
-</p>
-<!-- <p>In order for that to do what we want the jQuery file must be where we say it is.  
-</p>
-<h4>
-    To get the file on your computer we use the same process we would for ANY file... We download it.
-</h4>
- -->                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 # You Already Know How To Use jQuery
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## jQuery
 ### Using jQuery
-                    
+					
 Because you already know how to select **HTML Elements** with **CSS Selectors**.
 
 ```css
-    .menu-item { color : blue; } 
+	.menu-item { color : blue; } 
 /*       ^        ^       ^
-         |        |       └ The value of the CSS property is set to blue
-         |        └ The CSS property we're setting is color
-         └ HTML Elements with a class of 'menu-item' are selected
+		 |        |       └ The value of the CSS property is set to blue
+		 |        └ The CSS property we're setting is color
+		 └ HTML Elements with a class of 'menu-item' are selected
 */
 ```
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## jQuery
 ### Using jQuery
-                    
+					
 Because you already know how to select **HTML Elements** with **CSS Selectors**.
 
 ```css
-    .menu-item { color : blue; }
+	.menu-item { color : blue; }
 /*       ^        ^       ^
-         |        |       └ The value of the CSS property is set to blue
-         |        └ The CSS property we're setting is color
-         └ HTML Elements with a class of 'menu-item' are selected
+		 |        |       └ The value of the CSS property is set to blue
+		 |        └ The CSS property we're setting is color
+		 └ HTML Elements with a class of 'menu-item' are selected
 */
 ```
 That same code in jquery is done like this:
 ```javascript
-    jQuery('.menu-item').css('color', 'blue');
+	jQuery('.menu-item').css('color', 'blue');
 ```
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## jQuery
 ### Using jQuery
-                    
+					
 Let's look at what is going on here:
 
 ```javascript
@@ -730,12 +795,11 @@ jQuery('.menu-item').css('color', 'blue');
    |           that takes the form of a css selector
    | 
    └ The jquery function. This is the super important part.  
-     this makes everything else here work.
+	 this makes everything else here work.
 */
 ```
-                </section>
-                <!-- CURSOR -->
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 
 ## What can we do with jQuery?
 
@@ -746,10 +810,10 @@ We can use jQuery to:
 * Animate Items
 * Perform both simple and complex interactions with your users
 * Create rich user experiences with components like: 
-    * Tabs
-    * Accordians
-    * Draggable & droppable items
-    * Image Rotators
+	* Tabs
+	* Accordians
+	* Draggable & droppable items
+	* Image Rotators
 * Serve a random background image each time a page loads.
 * Create an 'infinite scroll' effect by loading more items when a user reaches the bottom of the page
 * Create complex layouts that are not possible with CSS alone.
@@ -758,8 +822,8 @@ We can use jQuery to:
 
 
 
-                </section>
-                <section class="slide">
+				</section>
+				<section class="slide">
 <h2>jQuery Examples:</h2>
 
 <p>Here are several different examples in one section.  Each button below has been given instructions to follow when clicked.</p>
@@ -774,8 +838,8 @@ We can use jQuery to:
 <p>The jQuery is where all the cool stuff is happening.</p>
 
 
-                </section>
-                <section class="slide">
+				</section>
+				<section class="slide">
 <h2>jQuery Examples:</h2>
 <div data-height="427" data-theme-id="7768" data-slug-hash="aKnJm" data-default-tab="js" class='codepen'>
 <p>See the Pen <a href='http://codepen.io/infn8/pen/aKnJm/'>jQuery Event and Method Examples</a> by Arron Gibson (<a href='http://codepen.io/infn8'>@infn8</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
@@ -788,8 +852,8 @@ We can use jQuery to:
 </p>
 
 
-                </section>
-                <section class="slide">
+				</section>
+				<section class="slide">
 <h2>jQuery Examples:</h2>
 
 <p>You can even extend the capabilities of jQuery with <strong>plugins</strong> like the jQuery UI plugin used below</p>
@@ -800,8 +864,8 @@ We can use jQuery to:
 <p>You can drag and Re-order the items above as you desire using the jQuery UI sortable plugin.</p>
 <p>Again, Have a look at the HTML, &amp; JS tabs as well as the Result tab. </p>
 
-                </section>
-                <section class="slide">
+				</section>
+				<section class="slide">
 <h2>jQuery Examples:</h2>
 
 <p>Here is an example of some chained animations.  (Chained means they run one after another)</p>
@@ -812,9 +876,9 @@ We can use jQuery to:
 <p>Have a look at the HTML, CSS, &amp; JS tabs as well as the Result tab.</p>
 <p>You can rerun the animations by hovering over the example and clicking the &quot;RERUN&quot; button in the bottom right corner.</p>
 
-                </section>
+				</section>
 <!--
-                <section class="slide" data-markdown> 
+				<section class="slide" data-markdown> 
 ## jQuery
 ### Downloading and using jQuery.
 
@@ -823,8 +887,8 @@ We can download the latest version of jQuery from their website at [jQuery.com](
 ![jQuery download page](./img/example_jquery_1.jpg)
 
 Click the big "Download jQuery" button.
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## jQuery
 ### Downloading and using jQuery.
 
@@ -834,8 +898,8 @@ The newest version of jQuery (Version 2.1.1) is arguably the best vesion yet.  I
 
 Version 2 doesn't do anything that version 1 doesn't do, it just does it all **much faster**. Unless you are *certain* no IE 6/7/8 users are visiting your site, you should use the Version 1 of jQuery.
 
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## jQuery
 ### Downloading and using jQuery.
 
@@ -846,8 +910,8 @@ To download jQuery find the link that says [Download the compressed, production 
 Right click that link and choose **Save Link As...** and choose the location on your computer where you are storing your project.  
 
 
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## jQuery
 ### Downloading and using jQuery.
 
@@ -860,8 +924,8 @@ Drag the file **jquery-1.11.1.min.js** into that new **js** folder.
 You have now downloaded jQuery.  The next step is to put it to use.
 
 
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## Take A Breather.
 
 Take a moment to work with your mentors to ensure that you have the **jquery-1.11.1.min.js** file saved to your computer in the '**js**' folder in your **hackapalooza project folder**.
@@ -869,9 +933,9 @@ Take a moment to work with your mentors to ensure that you have the **jquery-1.1
 We will continue once everyone has had a chance to make sure that they are this far and to have asked their mentors any questions they may have.
 
 If you are having trouble [Right click this link to the jQuery library file and press **Save Link As...** and choose the location on your computer where you are storing your Hackapalooza project](http://code.jquery.com/jquery-1.11.1.min.js).  Save the file in the subdirectory **js** in that location.
-                </section>
+				</section>
 -->
-                <section class="slide" data-markdown> 
+				<section class="slide" data-markdown> 
 ## Let's Review
 
 We have covered a lot so far, let's make sure we have a handle on all of this up to now.
@@ -880,8 +944,8 @@ We have covered a lot so far, let's make sure we have a handle on all of this up
 * **CSS** is what makes the look and feel of a webpage.
 * **JS** is ```JavaScript``` and it is what makes the behavior of a webpage.
 * **jQuery** is a library, written in JS, designed to make adding behavior to webpages easier than writing regular javascript.
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## Let's Review
 
 
@@ -890,8 +954,28 @@ We have covered a lot so far, let's make sure we have a handle on all of this up
 * The power of the jQuery library comes from the **jQuery()** function.
 
 Ok enough review let's start using jQuery!
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide">
+				<h2> Using jQuery. </h2>
+<p> You can include jQuery in your pages with one single line of HTML. </p>
+
+
+
+
+<pre><code class="HTML"> &lt;script src="js/jquery-1.11.1.js">&lt;/script></code></pre>
+
+<p>In this code, there is a <code>&lt;script></code> tag, with a single <strong> attribute </strong> called <code>src</code> which tells the browser where to find the script.</p>
+<p>In our case, the script is named '<code>jquery-1.11.1.js</code>' and it is located in a subdirectory called '<code>js</code>'. </p>
+<p>
+Once the jQuery library is included on our page, we can start to make use of the magic of jQuery.
+</p>
+<!-- <p>In order for that to do what we want the jQuery file must be where we say it is.  
+</p>
+<h4>
+	To get the file on your computer we use the same process we would for ANY file... We download it.
+</h4>
+ -->                </section>
+				<section class="slide" data-markdown> 
 ## Using jQuery
 ### Step 1, include the jQuery file on your HTML page using a new tag called:
 ```HTML
@@ -908,23 +992,25 @@ Open that file in a browser by double clicking it.
 
 [You can click here if you're viewing this slide presentation from the same zip file](examples/example-1/index.html).
 
-                </section>
-                <section class="slide"> 
+				</section>
+				<section class="slide"> 
 <h2> Using jQuery </h2>
-<h2> Step 1, include the jQuery file on your HTML page using a new tag called: </h2>
-<p> Locate the section of your html file called the <strong>head</strong> of the document.  it should look like this: </p>
+<p> Open that SAME file in Sublime Text and locate the section of your html file called the <strong>head</strong> of the document.  it should look like this: </p>
 
 <pre><code class="HTML">&lt;head>
-    &lt;title>My Hackapalooza Page&lt;/title>
-    &lt;!-- Links to stylesheets -->
-    &lt;!-- Maybe some meta tags and other stuff -->
-&lt;/head>
-</code></pre>
-<p> Inside the head tag put in the following new tag </p>
+  &lt;title>Ladies Learning Code HTML and CSS&lt;/title>
+  &lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  &lt;link rel="stylesheet" href="normalize.css" />
+  &lt;link rel="stylesheet" href="style.css" />
+  &lt;script src="js/jquery-1.11.1.min.js">&lt;/script>
+  &lt;!-- Your jQuery code will go here. -->
+&lt;/head> </code></pre>
+<p> Inside the head tag put in the following new tag. <small>(Right where the comment says to put it!)</small> </p>
 <pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 </code></pre>
-                </section>
-                <section class="slide">
+<p>Pro Tip: There is another file called snippets.txt in the example-1 folder.  you can copy and paste from there.</p>
+				</section>
+				<section class="slide">
 
 <h2>What did we just do?</h2>
 
@@ -943,50 +1029,21 @@ Open that file in a browser by double clicking it.
 
 <p>Great! Now let's go reload our page and see what jquery does when you include it in an HTML file.</p>
 
-<p>To see your project, find the <strong> index.html </strong> file in your hackapalooza project folder and double click it to open it in Chrome.</p>
 
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## Notice any difference in your project?
 ### No?
 
 That's because the jQuery library on its own doesn't DO anything, it simply gives you the tools to do something. What we do is up to us.
 
 Now that jQuery is on the page we can use the **jQuery();** function which is the real magic of jQuery.
-                </section>
-
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## Using jQuery and the jQuery(); function
 
 The basic idea of jQuery is that you target some item on the page and then add or change the behavior of that item.
 
-For instance you could take a dropdown button in a menu and set it so that when it is hovered over, a new menu slides down from the top.  That might look like this:
-
-```javascript
-jQuery(".nav button.view-menu").hover(function(){
-    jQuery(".nav .more-menu").slideDown();
-}, function(){
-    jQuery(".nav .more-menu").slideUp();
-});
-```
-
-DEMO HERE
-                </section>
-                <section class="slide" data-markdown> 
-## Using jQuery and the jQuery(); function
-
-You could also make it so that when clicking on a button to dismiss a popup, you remove an element from the document.
- 
-```javascript
-jQuery(".dialog .dismiss").click(function(){
-    jQuery(this).parent().remove();
-});
-```
-DEMO HERE
-
-These are just simple examples.  With jQuery and a little imagination the possibilities are endless.
-                </section>
-                <section class="slide" data-markdown> 
 ## How to select an item with jQuery(); 
 ### (So you can alter its behavior)
 
@@ -996,37 +1053,44 @@ Some examples:
 
 ```javascript
 jQuery("ul li.even");
-/*
-    The line above selects all list items, with a class of "even" 
-    in an any unordered list.
-*/ 
+```
+The line above selects all list items, with a class of "even" in an any unordered list.
+
+```javascript
 jQuery("#rotator .slide:first");
-/*
-    The line above selects the first item with a class of "slide" 
-    inside the item with an id of "rotator".
-*/ 
-``` 
-                </section>
-                <section class="slide" data-markdown> 
+```
+The line above selects the first item with a class of "slide" inside the item with an id of "rotator".
+
+				</section>
+				<section class="slide" data-markdown> 
 ## How to select an item with jQuery(); 
 ### (So you can alter its behavior)
 
 The HTML items or your page that match your selector are added into something called the **wrapped set**.  This is a special grouping of items that jQuery uses to know what items to alter or add behavior to.
 
 When you run a jQuery **method** the items in the **wrapped set** are the ones that will be altered or effected.
-                </section>
-                <section class="slide"> 
+				</section>
+				<section class="slide"> 
 <h2> jQuery Methods </h2>
-<p> the jQuery library comes with many many MANY different methods.  We won't discuss all of them here but if you want to see them all, and how to use them, you can go to <a href="http://api.jquery.com" target-"_blank">api.jquery.com</a>.</p>
+<p> the jQuery library comes with many many MANY different methods.  We won't discuss all of them here but if you want to see them all, and how to use them, you can go to <a href="http://api.jquery.com" target="_blank">api.jquery.com</a>.</p>
 <p>We will discuss a few methods here and a few more once we start making our rotator.</p>
 <ul>
-    <li>the <strong>.hide();</strong> method will hide all elements in the wrapped set.</li>
-    <li>the <strong>.show();</strong> method will show all elements in the wrapped set.</li>
-    <li>the <strong>.css();</strong> method allows you to alter the look of the elements in the wrapped set by passing two parameters.  The CSS property you want to edit and the new value of that property</li>
+	<li>the <strong>.hide();</strong> method will hide all elements in the wrapped set.</li>
+	<li>the <strong>.show();</strong> method will show all elements in the wrapped set.</li>
+	<li>the <strong>.css();</strong> method allows you to alter the look of the elements in the wrapped set by passing two parameters.  <ul><li> The CSS property you want to edit </li><li>and the new value of that property </li></ul> </li>
 </ul>
+<h3>Note:  A method is what we call an <strong>object property</strong> when it is a <strong>function</strong>. </h3>
+<pre><code class="javascript">var instructor = {
+	name : "Arron Gibson",
+	greet : function(){
+		alert("Greetings from Arron.  Welcome to my cool jQuery workshop!");
+	}
+}; </code></pre>
+<script> var instructor = {name : "Arron Gibson", greet : function(){alert("Greetings from Arron.  Welcome to my cool jQuery workshop!"); } }; </script>
+<p><code>instructor</code> is an <strong>object</strong>, That object has a <strong>property</strong> called <code>name</code> and a <strong>method</strong> called <code>greet</code>.</p>
 
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 
 ## jQuery Methods
 
@@ -1038,8 +1102,8 @@ jQuery(".alert").css("color", "red");</code></pre>
 Will take elements with a class of alert and make the text in them red.
 
 This by no means an exhaustive list, we will take notice when we intruduce new methods as we go on.
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## An Amazing Shortcut
 ### The Dollar Sign
 ```javascript
@@ -1057,8 +1121,13 @@ and that's just what we'll be doing going forward.
 
 
 
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+
+
+<!-- CURSOR -->
+
+
+				<section class="slide" data-markdown> 
 ## One last thing before we get into it the rotator.
 
 ### Timing.
@@ -1074,8 +1143,8 @@ and then later in the page you put
 ```
 The javascript code will run BEFORE the browser will even see the paragraph tag.  That means that jQuery won't match the element and won't make it's background color yellow!
 
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## Enter Document Ready
 
 Document ready is an **event**.  It's a *point in time* when the browser has downloaded enough of your page that it has seen all your tags and it can find them based off of the CSS selectors that you tell jQuery.
@@ -1083,19 +1152,19 @@ Document ready is an **event**.  It's a *point in time* when the browser has dow
 Running that same code on the **document ready** event looks like this:
 ```javascript
 $(document).ready(function(){
-    $("p.highlight").css("background-color", "yellow");
+	$("p.highlight").css("background-color", "yellow");
 });
 ```
 Document Ready is a little bit of a complex idea and again because we only have a small amount of time we won't explain how it works in great detail here.  Just trust me, you need it if you want your code to work. 
-                </section>
-                <section class="slide">
+				</section>
+				<section class="slide">
 <p> Go to your project in your text editor and find where we added the following line: </p>
 <pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 </code></pre>
 <p>and <strong> after that </strong> add this:</p>
 <pre><code class="HTML">&lt;script&gt;
 $(document).ready(function(){
-    // Add all jQuery code here.
+	// Add all jQuery code here.
 });
 &lt;&#47;&#115;cript&gt;
 </code></pre>
@@ -1103,16 +1172,16 @@ $(document).ready(function(){
 <p>That area is where we will add ALL of our jQuery code going forward.  When I say "Add this code to your document ready function" that is where I mean.</p>
 <pre><code class="HTML">&lt;script&gt;
 $(document).ready(function(){
-    // Right Here. your code goes right here.
+	// Right Here. your code goes right here.
 });
 &lt;&#47;&#115;cript&gt;
 </code></pre>
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Finally...
 ### We get to the image rotator
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Finally...
 ### We get to the image rotator
 
@@ -1122,47 +1191,47 @@ At it's most basic, a rotator is a list of images that uses javascript to show o
 
 ```html
 &lt;div id="rotator">
-    &lt;ul class="slides">
-        &lt;li>&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/li>
-        &lt;li>&lt;img src="img/rotator/image2.jpg" alt="Second Slide">&lt;/li>
-        &lt;li>&lt;img src="img/rotator/image3.jpg" alt="Third Slide">&lt;/li>
-    &lt;/ul>
+	&lt;ul class="slides">
+		&lt;li>&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/li>
+		&lt;li>&lt;img src="img/rotator/image2.jpg" alt="Second Slide">&lt;/li>
+		&lt;li>&lt;img src="img/rotator/image3.jpg" alt="Third Slide">&lt;/li>
+	&lt;/ul>
 &lt;/div>
 ```
 
 The javascript would show the first and hide the rest. Then, after a couple of seconds,  show the second and hide the rest.  Then keep going until all of the slides have been shown.  Then start again at the beginning. 
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## How Would We Build That?
 
 In order to build something like this we need to know how to hide objects, how to show them and how to wait a set amount of time before moving to the next image.  Using the HTML from before we could do something like this:
 
 ```javascript
 setInterval(function(){
-    if($('#rotator .rotator-items li:visible').next().length == 0){
-        $('#rotator .rotator-items li:visible').hide();
-        $('#rotator .rotator-items li:first').show();
-    } else {
-        $('#rotator .rotator-items li:visible').hide().next().show();
-    }
-    
+	if($('#rotator .rotator-items li:visible').next().length == 0){
+		$('#rotator .rotator-items li:visible').hide();
+		$('#rotator .rotator-items li:first').show();
+	} else {
+		$('#rotator .rotator-items li:visible').hide().next().show();
+	}
+	
 }, 2000);
 ```
 You can see an example of this in the next slide
-                </section>
-                <section class="slide">
-                    <div id="example-3">
-                        <div id="rotator">
-                            <ul class="rotator-items">
-                                <li><img src="img/rotator/image1.jpg" alt="First Slide"></li>
-                                <li><img src="img/rotator/image2.jpg" alt="Second Slide"></li>
-                                <li><img src="img/rotator/image3.jpg" alt="Third Slide"></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p>A Simple jQuery rotator.</p>
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide">
+					<div id="example-3">
+						<div id="rotator">
+							<ul class="rotator-items">
+								<li><img src="img/rotator/image1.jpg" alt="First Slide"></li>
+								<li><img src="img/rotator/image2.jpg" alt="Second Slide"></li>
+								<li><img src="img/rotator/image3.jpg" alt="Third Slide"></li>
+							</ul>
+						</div>
+					</div>
+					<p>A Simple jQuery rotator.</p>
+				</section>
+				<section class="slide" data-markdown> 
 ## Ok Cool, what ELSE can it do?
 
 Well that is really only limited by our imagination, and We're not the first people to ask that question.  What can a rotator do?  It would seem that many people have actually aready answered the question and have made their answers free for use in your projects.
@@ -1170,8 +1239,8 @@ Well that is really only limited by our imagination, and We're not the first peo
 For this reason we are not going to write our own rotator jQuery.  We are going to use someone else's hard work and reap the rewards.  Everything up to this point has been about getting you to understand the forces at play in this exercise.  to make it so that you know, on a basic level what is going on.  
 
 
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## Enter Flexslider
 
 Flexslider is a very capable, well maintained and responsive jQuery rotator.  Best of all it's free and easy to use.
@@ -1185,17 +1254,17 @@ Click the big green download button and download the zip file.  Expand that zip 
 ![Flexslider in the project directory](./img/example_flexslider_1.jpg)
 
 
-                </section>
-                <section class="slide">
+				</section>
+				<section class="slide">
 <h2>
-    
+	
 Add Flexslider to our project
 </h2>
 
 <p>
-    
+	
 Go to your <strong>
-    
+	
 index.html
 </strong>
  file on your hackapalooza project in <strong>
@@ -1206,25 +1275,25 @@ index.html
 <pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script&gt;
 $(document).ready(function(){
-    // Add all jQuery code here.
+	// Add all jQuery code here.
 });
 &lt;&#47;&#115;cript&gt;
 </code></pre>
 
 <p>
-    and we are going to put some new code in the middle of this so that it looks like this instead:
+	and we are going to put some new code in the middle of this so that it looks like this instead:
 </p>
 <pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script src="js/flexslider/jquery.flexslider-min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;link rel="stylesheet" href="js/flexslider/flexslider.css" />
 &lt;script&gt;
 $(document).ready(function(){
-    // Add all jQuery code here.
+	// Add all jQuery code here.
 });
 &lt;&#47;&#115;cript&gt;
 </code></pre>
-                </section>
-                <section class="slide"> 
+				</section>
+				<section class="slide"> 
 <p>notice the addition of the lines:</p>
 <pre><code class="HTML">&lt;script src="js/flexslider/jquery.flexslider-min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;link rel="stylesheet" href="js/flexslider/flexslider.css" />
@@ -1236,7 +1305,7 @@ $(document).ready(function(){
 
 <pre><code class="HTML">&lt;script&gt;
 $(document).ready(function(){
-    // Add all jQuery code here.
+	// Add all jQuery code here.
 });
 &lt;&#47;&#115;cript&gt;
 </code></pre>
@@ -1247,15 +1316,15 @@ $(document).ready(function(){
 &lt;link rel="stylesheet" href="js/flexslider/flexslider.css" />
 &lt;script&gt;
 $(document).ready(function(){
-    // Add all jQuery code here.
+	// Add all jQuery code here.
 });
 &lt;&#47;&#115;cript&gt;
 </code></pre>
 
 <p> and it should be in the <code>&lt;head></code> of your hackapalooza project page. </p>
 
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 ## Ok Breathe...
 
 You now have averything in place to make your slider. All we have to do after this is:
@@ -1265,55 +1334,55 @@ You now have averything in place to make your slider. All we have to do after th
 * Figure out if you want to have captions (Text to accompany each slide in the rotator)
 * Add the **HTML** needed for the rotator
 * Trigger flexslider to add new **behavior** to that HTML.
-                </section>
-                <section class="slide" data-markdown> 
+				</section>
+				<section class="slide" data-markdown> 
 
 #### From this point forward...
 
 we will be writing code on our projects that will be individualized to our own needs.
 
 I will give example **HTML**, **CSS**, **JavaScript** and **jQuery** code but you will need to adapt that code to do *what you want to do for your project*.
-                </section>
-                <section class="slide"> 
+				</section>
+				<section class="slide"> 
 <h2> Next Steps </h2>
 
 <p> The <strong> HTML </strong> </p>
 
 <pre><code class="html">&lt;section id="rotator" class="rotator box">
   &lt;div class="flexslider">
-    &lt;ul class="slides">
-      &lt;li>
-        &lt;img src="images/rotator-1.jpg" alt="Rotator Image 1">
-        &lt;div class="flex-caption">&lt;p>Slide Caption 1&lt;/p>&lt;/div>
-      &lt;/li>
-      &lt;li>
-        &lt;img src="images/rotator-2.jpg" alt="Rotator Image 2">
-        &lt;div class="flex-caption">&lt;p>Slide Caption 2&lt;/p>&lt;/div>
-      &lt;/li>
-      &lt;li>
-        &lt;img src="images/rotator-3.jpg" alt="Rotator Image 3">
-        &lt;div class="flex-caption">&lt;p>Slide Caption 3&lt;/p>&lt;/div>
-      &lt;/li>
-    &lt;/ul>
+	&lt;ul class="slides">
+	  &lt;li>
+		&lt;img src="images/rotator-1.jpg" alt="Rotator Image 1">
+		&lt;div class="flex-caption">&lt;p>Slide Caption 1&lt;/p>&lt;/div>
+	  &lt;/li>
+	  &lt;li>
+		&lt;img src="images/rotator-2.jpg" alt="Rotator Image 2">
+		&lt;div class="flex-caption">&lt;p>Slide Caption 2&lt;/p>&lt;/div>
+	  &lt;/li>
+	  &lt;li>
+		&lt;img src="images/rotator-3.jpg" alt="Rotator Image 3">
+		&lt;div class="flex-caption">&lt;p>Slide Caption 3&lt;/p>&lt;/div>
+	  &lt;/li>
+	&lt;/ul>
   &lt;/div>
 &lt;/section> </code></pre>
 <p>This is the starter code that you should paste into your page where you want your rotator to go.</p>
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Making it your own.
 
 * Edit the **amount** of list items in the slides list to match the amount of images you will be using.
 * Edit the image **filenames** to point to the images you want to use
 * Edit the **alt** attribute of each image to write a description of that image
 * Edit the captions as you like
-    * If you do not want captions delete the line 
+	* If you do not want captions delete the line 
 ```html
 &lt;div class="flex-caption">&lt;p>Slide Caption 1&lt;/p>&lt;/div>
 ``` 
 from each slide you don't want captions on.
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Making it work
 
 In your **Document Ready Function** add the following code to tell flexslider to run:
@@ -1322,8 +1391,8 @@ In your **Document Ready Function** add the following code to tell flexslider to
 $('.flexslider').flexslider();
 ```  
 Yep,  that's it.
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Making it work
 
 In your **Document Ready Function** add the following code to tell flexslider to run:
@@ -1335,30 +1404,30 @@ Yep,  that's it.  You should now be able to load your page in your browser now a
 
 ### Let's break that down
 ```javascript
-    $('.flexslider').flexslider();
+	$('.flexslider').flexslider();
 //  |      |             |     └ Parenthesis indicate a Function Call
 //  |      |             └ The Flexslider Method 
 //  |      └ The CSS selector '.flexslider' will add any items
 //  |          with the class 'flexslider' to the jQuery wrapped set 
 //  └ The jQuery Function
 ```
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Making it work
 ### The way you want it to.
 
 Some of Flexslider's available options:
 
 * Animation Type
-    * **fade** or **slide**
+	* **fade** or **slide**
 * Slideshow Speed
-    * The Amount of time, in milliseconds, between slides.
+	* The Amount of time, in milliseconds, between slides.
 * Animation Loop
-    * When you get to the last slide should you go back to the start?
+	* When you get to the last slide should you go back to the start?
 
 There are many more options, [see a complete list on this page](http://www.woothemes.com/flexslider/), but let's look at how to set them. 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Using A Configuration Object with Flexslider
 
 find the line in your code that says:
@@ -1375,11 +1444,11 @@ $('.flexslider').flexslider({ slideshowSpeed : 2000 });
 ```  
 Reload that.  Do you notice a difference?
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ### Let's break that down
 ```javascript
-    $('.flexslider').flexslider({ slideshowSpeed : 2000 });
+	$('.flexslider').flexslider({ slideshowSpeed : 2000 });
 //  |      |             |     ||       |            |  |└ End Parenthesis
 //  |      |             |     ||       |            |  └ End Curly Brackets
 //  |      |             |     ||       |            └ The property has
@@ -1397,30 +1466,30 @@ Reload that.  Do you notice a difference?
 We pass an **object** as a **parameter** to the flexslider **method** of jQuery.  
 
 The **object** has **properties** and **values** that flexslider will use to override its defaults.
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Objects
 
 An **object** is a JavaScript **data type**, just like a **string** or a *number* is.
 
 ```javascript
 var myObject = {
-    animation : "slide",
-    slideshowSpeed : 2000 
+	animation : "slide",
+	slideshowSpeed : 2000 
 };
 ```
 You can assign **objects** to **variables** and then use them the same as other **variables**.
 ```javascript
 var myObject = {
-    animation : "slide",
-    slideshowSpeed : 2000 
+	animation : "slide",
+	slideshowSpeed : 2000 
 };
 $('.flexslider').flexslider(myObject);
 ```  
 This creates a flexslider with a sliding animation every 2 seconds.
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## I Can Haz Responsive?
 
 Flexslider comes out of the box with the ability to be responsive.  Try it now.  resize your browser and watch your images scale as needed.
@@ -1428,15 +1497,15 @@ Flexslider comes out of the box with the ability to be responsive.  Try it now. 
 #### Pro Tip:
 
 Make your images only as wide as they NEED to be.  That is, the largest size that you will need in your design.  They will automatically scale down as needed, but if you make them larger then they need to be the file size will be larger and your page will download slower.
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Ok we are done now!
 
 **Exciting** You now have a responsive image rotator on your project page full of the images that you want to show to people.  But why stop there right?  we can do better.  
 
 Let's try a few more cool things.
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## The Thumbnail Slider
 
 What if you wanted to have all your images to have a small row of thumbnails along the bottom to help with navigation for the user?
@@ -1447,8 +1516,8 @@ The steps for this are to create 2 seperate flexsliders. 1 is the **carousel**, 
 
 We create both of them and then give the JS the right commands to work for both of them and keep them in sync.
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## The Randomness
 
 What if we are showing a bunch of slides from different artists and we don't want to show preference to one artist over another?
@@ -1457,55 +1526,55 @@ What if we are showing a bunch of slides from different artists and we don't wan
 $('.flexslider').flexslider({ randomize: true });
 ```  
 Boom!  impartial.
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Clickable Slides
 
 It is super simple to make your slides able to link to another page, or even another section on the same page.  Let's look at the HTML we are using now:
 ```html
 &lt;div id="rotator">
-    &lt;ul class="slides">
-        &lt;li>&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/li>
-        &lt;li>&lt;img src="img/rotator/image2.jpg" alt="Second Slide">&lt;/li>
-        &lt;li>&lt;img src="img/rotator/image3.jpg" alt="Third Slide">&lt;/li>
-    &lt;/ul>
+	&lt;ul class="slides">
+		&lt;li>&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/li>
+		&lt;li>&lt;img src="img/rotator/image2.jpg" alt="Second Slide">&lt;/li>
+		&lt;li>&lt;img src="img/rotator/image3.jpg" alt="Third Slide">&lt;/li>
+	&lt;/ul>
 &lt;/div>
 ```
 Now let's just wrap those images in links using the ```&lt;a>``` tag in **HTML**
 
 ```html
 &lt;div id="rotator">
-    &lt;ul class="slides">
-        &lt;li>&lt;a href="#section1">&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#section2">&lt;img src="img/rotator/image2.jpg" alt="Second Slide">&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#section3">&lt;img src="img/rotator/image3.jpg" alt="Third Slide">&lt;/a>&lt;/li>
-    &lt;/ul>
+	&lt;ul class="slides">
+		&lt;li>&lt;a href="#section1">&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="#section2">&lt;img src="img/rotator/image2.jpg" alt="Second Slide">&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="#section3">&lt;img src="img/rotator/image3.jpg" alt="Third Slide">&lt;/a>&lt;/li>
+	&lt;/ul>
 &lt;/div>
 ```
 
 
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Something that's not an image?
 
 Flexslider works by rotating between slides *regardless of their content*. So you could easily do something like this:
 ```html
 &lt;div id="rotator">
-    &lt;ul class="slides">
-        &lt;li>&lt;p>Lorem ipsum dolor sit amet&lt;/p>&lt;/li>
-        &lt;li>&lt;p>consectetur adipisicing elit.&lt;/p>&lt;/li>
-        &lt;li>&lt;p>Impedit, ullam iste pariatur enim consequuntur.&lt;/p>&lt;/li>
-    &lt;/ul>
+	&lt;ul class="slides">
+		&lt;li>&lt;p>Lorem ipsum dolor sit amet&lt;/p>&lt;/li>
+		&lt;li>&lt;p>consectetur adipisicing elit.&lt;/p>&lt;/li>
+		&lt;li>&lt;p>Impedit, ullam iste pariatur enim consequuntur.&lt;/p>&lt;/li>
+	&lt;/ul>
 &lt;/div>
 ```
-                </section>
-                <section class="slide" data-markdown>
+				</section>
+				<section class="slide" data-markdown>
 ## Thank You.
 
 for your time and attention.  We have covered a lot here in our exercise of the mind.  If you have any questions or comments feel free to [hit me up on twitter](http://twitter.com/arrongibson), or [email me](mailto:Arron@InfinityMedia.ca?subject=Hackapalooza+Help).
 
 We will take the rest of the time to work with you on your projects and make sure that we are all comfortable with what we have just learned.
-                </section>
+				</section>
 
 
 
@@ -1513,45 +1582,45 @@ We will take the rest of the time to work with you on your projects and make sur
 
 
 
-            <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
-      
+			<p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+	  
 
-    </section><!-- cls main section -->
+	</section><!-- cls main section -->
 
-    <!-- Last slide -->
-    <footer class="slide">
-        <h2>Thank you!</h2>
-        <p>Closing remarks</p>
-        <p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
-    </footer>
+	<!-- Last slide -->
+	<footer class="slide">
+		<h2>Thank you!</h2>
+		<p>Closing remarks</p>
+		<p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+	</footer>
 
 
-    <script src="slideshow.js"></script>
+	<script src="slideshow.js"></script>
 
-    <!-- Uncomment the plugins you need -->
-    <script src="plugins/css-edit.js"></script>
-    <script src="plugins/css-snippets.js"></script>
-    <script src="plugins/css-controls.js"></script>
-    <!-- <script src="plugins/code-highlight.js"></script>-->
+	<!-- Uncomment the plugins you need -->
+	<script src="plugins/css-edit.js"></script>
+	<script src="plugins/css-snippets.js"></script>
+	<script src="plugins/css-controls.js"></script>
+	<!-- <script src="plugins/code-highlight.js"></script>-->
 
-    <script src="plugins/markdown/marked.js"></script>
-    <script src="plugins/markdown/markdown.js"></script>
-    <script src="plugins/highlight/highlight.js"></script>    
-    <script>hljs.initHighlightingOnLoad();</script>
+	<script src="plugins/markdown/marked.js"></script>
+	<script src="plugins/markdown/markdown.js"></script>
+	<script src="plugins/highlight/highlight.js"></script>    
+	<script>hljs.initHighlightingOnLoad();</script>
 
-    <!-- Prettify 
-    <script src="plugins/prettify.js"></script>
-    <script src="plugins/lang-css.js"></script>
-    <script src="plugins/prism.js"></script>
+	<!-- Prettify 
+	<script src="plugins/prettify.js"></script>
+	<script src="plugins/lang-css.js"></script>
+	<script src="plugins/prism.js"></script>
 -->
-    <script>
-        var slideshow = new SlideShow();
+	<script>
+		var slideshow = new SlideShow();
 
-        // Grabs all the .snippet elements
-        var snippets = document.querySelectorAll('.snippet');
-        for(var i=0; i<snippets.length; i++) {
-            new CSSSnippet(snippets[i]);
-        }
-    </script>
+		// Grabs all the .snippet elements
+		var snippets = document.querySelectorAll('.snippet');
+		for(var i=0; i<snippets.length; i++) {
+			new CSSSnippet(snippets[i]);
+		}
+	</script>
 </body>
 </html>

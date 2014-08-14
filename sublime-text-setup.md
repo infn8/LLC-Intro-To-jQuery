@@ -19,8 +19,8 @@ This is a plugin that makes adding plugins easier.  We will add this plugin firs
 Emmet is an amazing plugin that makes working with HTML and CSS muuch more enjoyable by letting you learn a shorthand that sublime text will expand into the full text.  It's a "write less, do more" kind of thing.  Here's how to install it.
 
 * In sublime text open the Command Pallete:
-    * On a Mac you do this with &lt;CMD> + &lt;SHIFT> + &lt;P> (⌘⇧P)
-    * On Windows you do this with &lt;CTRL> + &lt;SHIFT> + &lt;P> (^⇧P)
+    * On a Mac you do this with <CMD> + <SHIFT> + <P> (⌘⇧P)
+    * On Windows you do this with <CTRL> + <SHIFT> + <P> (^⇧P)
 * This lets you run any command by typing the name of it.
 * To install a plugin type "Install Package" and press enter.
     * When the item that says **Package Control: Install Package** is highlighted that when you want to press enter
@@ -47,19 +47,19 @@ type the following:
 ```
 .menu>ul>li*5>a
 ```
-then press the &lt;TAB> key with your cursor at the very end of the text you typed (it won't work with a space there).
+then press the <TAB> key with your cursor at the very end of the text you typed (it won't work with a space there).
 
 Whoa!!!  did that just turn into this?
 ```
-&lt;div class="menu">
-    &lt;ul>
-        &lt;li>&lt;a href="">&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="">&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="">&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="">&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="">&lt;/a>&lt;/li>
-    &lt;/ul>
-&lt;/div>
+<div class="menu">
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+</div>
 ```
 
 That's right Emmet just let you write something Super cool.  here's how:
@@ -76,6 +76,4 @@ That's right Emmet just let you write something Super cool.  here's how:
 ```
 
 You can learn more about the way that Emmet uses shortcuts at <http://emmet.io/>.  It's realy cool.  just don't do this while the workshop is running ok?  cool thanks!
-
-- Arron
 

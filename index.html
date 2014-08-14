@@ -1210,16 +1210,14 @@ $(document).ready(function(){
 </code></pre>
 				</section>
 				<section class="slide" data-markdown>
-## Hover and Click Events
 
 On the example page we have a section at the bottom where there are 4 pictures of my dog Phoenix.
 
 ![She is a Nova Scotia Duck Tolling Retreiver](img/Screen-Shot-1.png)
 
-Let's add some hover and click functions to those!
+Let's have some fun with those!
 				</section>
 				<section class="slide" data-markdown>
-## Hover and Click Events
 
 The HTML for that section looks like this:
 
@@ -1236,7 +1234,6 @@ The HTML for that section looks like this:
 So how would we **select** those images with jQuery?
 				</section>
 				<section class="slide" data-markdown>
-## Hover and Click Events
 
 The HTML for that section looks like this:
 
@@ -1257,25 +1254,145 @@ $("#favourites img");
 Yep that would do it.
 				</section>
 				<section class="slide" data-markdown>
-## Hover and Click Events
 
-Now let's try changing their size.  Put this in your **document ready** event:
+Now let's try changing their size.  Make your **document ready** event look like this:
 ```javascript
-$("#favourites img").width(100);
+$(document).ready(function(){
+	$("#favourites img").width(100);
+});
+```
+Then save the file with sublime, go to chrome and refresh the page.  If you've done it right it should look like this:
+
+![That's a Tiny Toller](img/Screen-Shot-2.png)
+
+				</section>
+				<section class="slide" data-markdown>
+
+What about Bigger?  What if your **document ready** event looked like this?:
+```javascript
+$(document).ready(function(){
+	$("#favourites img").width(400);
+});
 ```
 
+Again, save the file with sublime, go to chrome and refresh the page.  
+				</section>
+				<section class="slide" data-markdown>
+
+If you've done it right it should look like this:
+
+![That's a HUGE Toller](img/Screen-Shot-3.png)
+
 				</section>
 				<section class="slide" data-markdown>
 ## Hover and Click Events
+
+Setting the width of something is pretty cool but we could use CSS to do that.  Let's try something only JavaScript could help us with. Let's add a **click event**.
+
+Like the document ready **event**, a click event is a moment in time when we want to trigger some code to run.  But instead of the browser running the document ready event right away, it only runs a click event when an item is actually clicked by the user.
+
+When we add a function to a **user triggered event** like this we call it an **event listener**.  Our code just sits around waiting and listening for the event to happen.  When someone finally clicks the item it triggers our function to run. 
 				</section>
 				<section class="slide" data-markdown>
 ## Hover and Click Events
+
+To add an **event listener** to our items we need to select them just like anything else with jQuery.
+```javascript
+$("#favourites img");
+```
 				</section>
 				<section class="slide" data-markdown>
 ## Hover and Click Events
+
+To add an **event listener** to our items we need to select them just like anything else with jQuery.
+```javascript
+$("#favourites img");
+```
+Then we add the ```.click()``` **method**
+```javascript
+$("#favourites img").click();
+```
 				</section>
 				<section class="slide" data-markdown>
 ## Hover and Click Events
+
+To add an **event listener** to our items we need to select them just like anything else with jQuery.
+```javascript
+$("#favourites img");
+```
+Then we add the ```.click()``` **method**
+```javascript
+$("#favourites img").click();
+```
+We pass a single **parameter** to that method.  That parameter is itself a **function**.
+```javascript
+$("#favourites img").click(function(){ });
+```
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+
+To add an **event listener** to our items we need to select them just like anything else with jQuery.
+```javascript
+$("#favourites img");
+```
+Then we add the ```.click()``` **method**
+```javascript
+$("#favourites img").click();
+```
+We pass a single **parameter** to that method.  That parameter is itself a **function**.
+```javascript
+$("#favourites img").click(function(){ });
+```
+inside that function we write the code that will take place when the image is clicked
+```javascript
+$("#favourites img").click(function(){ 
+	/* Our code goes here */
+});
+```
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+
+Let's make the click event hide the picture.
+```javascript
+$("#favourites img").click(function(){ 
+	$(this).hide();
+});
+```
+The code above will take the clicked image and set it so it does not display.  The item is still there, we just cant see it. [You can see an example of this in action here](examples/example-2/index.hide.html#favourites).
+
+What if we wanted to make the image animate away before being hidden?  Well the hide **method** accepts a **parameter** for how long the hiding should take to occur.
+```javascript
+$("#favourites img").click(function(){ 
+	$(this).hide(1000);
+});
+```
+
+This will make the act of hiding the image take 1000 milliseconds, or 1 second.
+
+[You can see that in action here](examples/example-2/index.hide.1000.html#favourites).
+
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+
+What if we just want to hide it for a bit, then show it again?  well we can do what's called **chaining** our methods.
+```javascript
+$("#favourites img").click(function(){ 
+	$(this).hide(1000).show('fast');
+});
+```
+[View This](examples/example-2/index.hide.show.html#favourites).
+
+
+All jquery methods can chain together with a dot (.) in between them.  That means that [this silliness](examples/example-2/index.hide.show.silly.html#favourites) is perfectly valid and will work just fine.
+```javascript
+$("#favourites img").click(function(){ 
+$(this).hide(1000).show('fast').fadeOut('slow').fadeIn(5000).slideUp(800).slideDown(10000);
+});
+```
+All of these **methods** accept a **parameter** for how long the animation should take.  in jQuery any time you can provide a duration to an animation you can either use a **number** of milliseconds, or a **string** value of either "```fast```" or "```slow```" which mean 400 and 600 milliseconds respectively.
 				</section>
 				<section class="slide" data-markdown>
 ## Title

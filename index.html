@@ -36,8 +36,8 @@
 			}
 			return false;
 		});
-		$('body').on('click', '[href^="examples/"]', function(event) {
-			$(this).attr('target', '_blank'); // open examples in new tab.
+		$('body').on('click', '[href^="examples/"], [href^="http"]', function(event) {
+			$(this).attr('target', '_blank'); // open examples and external sites in new tab.
 		});
 	});
 	</script>
@@ -1154,7 +1154,6 @@ Go back to that folder on the desktop and open up the <code>example-2</code> fol
 				</section>
 
 
-<!-- CURSOR -->
 
 
 				<section class="slide" data-markdown> 
@@ -1395,53 +1394,83 @@ $(this).hide(1000).show('fast').fadeOut('slow').fadeIn(5000).slideUp(800).slideD
 All of these **methods** accept a **parameter** for how long the animation should take.  in jQuery any time you can provide a duration to an animation you can either use a **number** of milliseconds, or a **string** value of either "```fast```" or "```slow```" which mean 400 and 600 milliseconds respectively.
 				</section>
 				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Title
-				</section>
-				<section class="slide" data-markdown>
-## Finally...
-### We get to the image rotator
-				</section>
-				<section class="slide" data-markdown>
-## Finally...
-### We get to the image rotator
+## What the heck is ```$(this)```?!?!
 
-So, What IS an image rotator?
+You may have noticed the following code in the previous several examples
+```javascript
+$(this)
+```
+So what is ```$(this)``` and what does it do?  
+
+### Good question!
+
+when you are writing code inside of a function that is passed to a jQuery **method** like we are here:
+
+```javascript
+$("#favourites img").click(function(){ 
+	$(this).hide(1000);
+});
+```
+jQuery gives us a special variable called ```this``` as a helper.  
+
+The ```this``` variable is always equal to the specific *HTML element* that has been clicked and that our **event listener** is acting upon.  We add the ```$()``` around it to make that element be inside a **wrapped set** so that we can run all of the jQuery **methods** on it.
+
+				</section>
+				<section class="slide" data-markdown>
+## jQuery Plugins
+
+jQuery is an extremely capable library on its own.  It comes with hundreds of **methods**, many other helper **properties** and the ability to select items for the wraped set based on **CSS Syntax**.  
+
+
+				</section>
+				<section class="slide" data-markdown>
+## jQuery Plugins
+
+jQuery is an extremely capable library on its own.  It comes with hundreds of **methods**, many other helper **properties** and the ability to select items for the wraped set based on **CSS Syntax**.  
+
+### But jQuery doesn't & can't do everything.  
+
+There would be no way to write a library with methods to handle everything any user would ever want to do.  Even if that was possible, it would make the library so large that it would take browsers a very long time to download it and the initial page loading speed of any site that used it would be *VERY SLOW*.  
+
+
+				</section>
+				<section class="slide" data-markdown>
+## jQuery Plugins
+
+jQuery is an extremely capable library on its own.  It comes with hundreds of **methods**, many other helper **properties** and the ability to select items for the wraped set based on **CSS Syntax**.  
+
+### But jQuery doesn't & can't do everything.  
+
+There would be no way to write a library with methods to handle everything any user would ever want to do.  Even if that was possible, it would make the library so large that it would take browsers a very long time to download it and the initial page loading speed of any site that used it would be *VERY SLOW*.  
+
+### Enter Plugins
+
+A jQuery plugin is some code that *someone else* has written, that you can use, to achieve certain goals that the jQuery library itself is not designed to handle.
+
+				</section>
+				<section class="slide" data-markdown>
+## jQuery Plugins
+
+Some examples of jQuery plugins are 
+
+* [Scroll Magic](http://janpaepke.github.io/ScrollMagic/)
+	* A plugin to make it easy for adding effects based on the users scroll position on the page
+* [ToolTipster](http://iamceege.github.io/tooltipster/#demos)
+	* Custom pretty Tool Tips
+* [jQuery UI](http://jqueryui.com/themeroller/)
+	* A collection of UI widgets designed to make adding complex user interactions easier and very themeable. 
+		* This plugin is developed by the jQuery team itself
+		* **UI = User Interface**
+* [FlexSlider](http://flexslider.woothemes.com/)
+	* The best responsive slider. Period.
+	* We are going to use this Plugin to add a slider of images to our project
+
+
+
+				</section>
+<!-- CURSOR -->
+				<section class="slide" data-markdown>
+## So, What IS an image rotator?
 
 At it's most basic, a rotator is a list of images that uses javascript to show one image on its own, then another, then another...  SO if we used HTML like this:
 
@@ -1456,45 +1485,6 @@ At it's most basic, a rotator is a list of images that uses javascript to show o
 ```
 
 The javascript would show the first and hide the rest. Then, after a couple of seconds,  show the second and hide the rest.  Then keep going until all of the slides have been shown.  Then start again at the beginning. 
-				</section>
-				<section class="slide" data-markdown> 
-## How Would We Build That?
-
-In order to build something like this we need to know how to hide objects, how to show them and how to wait a set amount of time before moving to the next image.  Using the HTML from before we could do something like this:
-
-```javascript
-setInterval(function(){
-	if($('#rotator .rotator-items li:visible').next().length == 0){
-		$('#rotator .rotator-items li:visible').hide();
-		$('#rotator .rotator-items li:first').show();
-	} else {
-		$('#rotator .rotator-items li:visible').hide().next().show();
-	}
-	
-}, 2000);
-```
-You can see an example of this in the next slide
-				</section>
-				<section class="slide">
-					<div id="example-3">
-						<div id="rotator">
-							<ul class="rotator-items">
-								<li><img src="img/rotator/image1.jpg" alt="First Slide"></li>
-								<li><img src="img/rotator/image2.jpg" alt="Second Slide"></li>
-								<li><img src="img/rotator/image3.jpg" alt="Third Slide"></li>
-							</ul>
-						</div>
-					</div>
-					<p>A Simple jQuery rotator.</p>
-				</section>
-				<section class="slide" data-markdown> 
-## Ok Cool, what ELSE can it do?
-
-Well that is really only limited by our imagination, and We're not the first people to ask that question.  What can a rotator do?  It would seem that many people have actually aready answered the question and have made their answers free for use in your projects.
-
-For this reason we are not going to write our own rotator jQuery.  We are going to use someone else's hard work and reap the rewards.  Everything up to this point has been about getting you to understand the forces at play in this exercise.  to make it so that you know, on a basic level what is going on.  
-
-
 				</section>
 				<section class="slide" data-markdown> 
 ## Enter Flexslider
@@ -1722,28 +1712,6 @@ Reload that.  Do you notice a difference?
 We pass an **object** as a **parameter** to the flexslider **method** of jQuery.  
 
 The **object** has **properties** and **values** that flexslider will use to override its defaults.
-				</section>
-				<section class="slide" data-markdown>
-## Objects
-
-An **object** is a JavaScript **data type**, just like a **string** or a *number* is.
-
-```javascript
-var myObject = {
-	animation : "slide",
-	slideshowSpeed : 2000 
-};
-```
-You can assign **objects** to **variables** and then use them the same as other **variables**.
-```javascript
-var myObject = {
-	animation : "slide",
-	slideshowSpeed : 2000 
-};
-$('.flexslider').flexslider(myObject);
-```  
-This creates a flexslider with a sliding animation every 2 seconds.
-
 				</section>
 				<section class="slide" data-markdown>
 ## I Can Haz Responsive?

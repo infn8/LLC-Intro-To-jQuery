@@ -50,7 +50,7 @@ type the following:
 then press the <TAB> key with your cursor at the very end of the text you typed (it won't work with a space there).
 
 Whoa!!!  did that just turn into this?
-```
+```html
 <div class="menu">
     <ul>
         <li><a href=""></a></li>

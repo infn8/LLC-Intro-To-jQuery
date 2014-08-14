@@ -11,7 +11,11 @@
   <script>
     $(document).ready(function(){
       // Add all jQuery code here.
-      $('.flexslider').flexslider();
+      $('.flexslider').flexslider({
+        animation: "slide",
+        randomize: true,
+        controlNav: false
+      });
     });
   </script>
 </head>

@@ -19,4 +19,5 @@ This is a plugin that makes adding plugins easier.  We will add this plugin firs
 Emmet is an amazing plugin that makes working with HTML and CSS muuch more enjoyable by letting you learn a shorthand that sublime text will expand into the full text.  It's a "write less, do more" kind of thing.  Here's how to install it.
 
 * In sublime text open the Command Pallete:
-    * On a Mac you do this with &lt;CMD> + &lt;SHIFT> + &lt;P>
+    * On a Mac you do this with &lt;CMD> + &lt;SHIFT> + &lt;P> (⌘⇧P)
+    * On Windows you do this with &lt;CTRL> + &lt;SHIFT> + &lt;P> (^⇧P)

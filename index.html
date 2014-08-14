@@ -76,18 +76,18 @@
 You will Need:
 
 1. Your Laptop
-* The [Google Chrome Browser](http://chrome.com) 
-	* *Don't use Firefox, Safari, Opera or Internet Explorer*
+* The [Google Chrome Browser](http://chrome.com) <!-- * *Don't use Firefox, Safari, Opera or Internet Explorer* -->
 * Sublime Text
 	* This is an amazing text editor and you can [download it here](http://www.sublimetext.com/2)
 * A download of the files we will be using
-	* You can [get a zip of those here](https://github.com/infn8/LLC-Intro-To-jQuery/archive/master.zip)
+	* You can get a zip of those here:
+		* [https://github.com/infn8/LLC-Intro-To-jQuery/archive/master.zip](https://github.com/infn8/LLC-Intro-To-jQuery/archive/master.zip)
 		* Download that file and unzip the contents of it to your desktop.
-		* This is where we're going to keep our project and our work during this workshop.
-			* You *can* put this elsewhere on your computer if you like but it's up to you to remember where that is later in the workshop.
+			* This is where we're going to keep our project and our work during this workshop.
+				* You *can* put this elsewhere on your computer if you like but it's up to you to remember where that is later in the workshop.
 * A **Sense of Adventure**!!!
-
-If you have all of this and the course has not started running yet and you're looking to do something cool you can [go here](https://github.com/infn8/LLC-Intro-To-jQuery/blob/jQuery-Demo/sublime-text-setup.md) to add some cool functionality to your Sublime Text install.  (Please, ONLY do this when the workshop is NOT running.)
+	
+##### If you have all of this and the course has not started running yet and you're looking to do something cool you can [go here](https://github.com/infn8/LLC-Intro-To-jQuery/blob/master/sublime-text-setup.md) to add some cool functionality to your Sublime Text install.  (Please, ONLY do this when the workshop is NOT running.)
 
 
 				</section>
@@ -96,12 +96,12 @@ If you have all of this and the course has not started running yet and you're lo
 ### What Is HTML?
 
 HTML (HyperText Markup Language) is the **content** of your document. Using ```&lt;tags>``` we can create **elements** that represent items on our page.  Items like paragraphs.
-```html
+```xml
 &lt;p>Paragraph Text&lt;/p>
 ```
 Lists
 
-```html
+```xml
 &lt;ul>
 	&lt;li>List Item&lt;/li> 
 	&lt;li>List Item&lt;/li> 
@@ -111,7 +111,7 @@ Lists
 
 and images
 
-```html
+```xml
 &lt;img src="http://www.fillmurray.com/300/300" alt="Placeholder Image" />
 ```
 
@@ -152,7 +152,7 @@ Which targets *any* element with id="rotator".
 				<section class="slide">
 <p>
 	
-<strong>CSS Rules</strong> go inside the {curly brackets} that follow the **CSS Selector** and they look like this:
+<strong>CSS Rules</strong> go inside the {curly braces} that follow the <strong>CSS Selector</strong> and they look like this:
 </p>
 <pre><code> p {
 	font-size: 2em;
@@ -259,12 +259,9 @@ You can use either style of quotation mark but you must both start and end the s
 
 ```javascript
 var works     = "This string value's the bomb!!!";
-var fails     = 'This string value's the bomb!!!';                                                     ';
-var alsoWorks = "Then I said: 'That string value was the bomb!!!'.";
-var alsoFails = "Then I said: "That string value was the bomb!!!".";                                   
-/* ' /*         ^             ^
-				|             | 
-				|_____________| 
+/* ' /*         ^                 ^
+				|                 | 
+				|_________________| 
 				|
 				Javascript thinks the string ends with the apostrophe.
 
@@ -273,6 +270,9 @@ var alsoFails = "Then I said: "That string value was the bomb!!!".";
 				
 					"SyntaxError: missing ; before statement" 
 */
+var fails     = 'This string value's the bomb!!!';                                                     ';
+var alsoWorks = "Then I said: 'That string value was the bomb!!!'.";
+var alsoFails = "Then I said: "That string value was the bomb!!!".";                                   
 ```
 				</section>
 				<section class="slide" data-markdown>
@@ -403,7 +403,9 @@ Then notice that your console displays:
 &lt; "Hello World!"
 ```
 
-This is because we told the console to give us the value of the variable ```myFirstVariable``` which it did.  That value was the one we gave it of ```Hello World!```
+This is because we told the console to give us the value of the variable ```myFirstVariable``` which it did.  
+
+That value was the one we gave it of ```Hello World!```
 
 
 				</section>
@@ -641,7 +643,7 @@ if a variable is a **name** for a **value**, then a function is a **name** for a
 ```javascript
 function sayHello(){
 	/*
-	There can be many commands here in between the two {curly brackets}
+	There can be many commands here in between the two {curly braces}
 	Let's make the first command an alert to the user.
 	*/ 
 	alert("Hello World");
@@ -962,7 +964,7 @@ Ok enough review let's start using jQuery!
 
 
 
-<pre><code class="HTML"> &lt;script src="js/jquery-1.11.1.js">&lt;/script></code></pre>
+<pre><code class="xml"> &lt;script src="js/jquery-1.11.1.js">&lt;/script></code></pre>
 
 <p>In this code, there is a <code>&lt;script></code> tag, with a single <strong> attribute </strong> called <code>src</code> which tells the browser where to find the script.</p>
 <p>In our case, the script is named '<code>jquery-1.11.1.js</code>' and it is located in a subdirectory called '<code>js</code>'. </p>
@@ -978,7 +980,7 @@ Once the jQuery library is included on our page, we can start to make use of the
 				<section class="slide" data-markdown> 
 ## Using jQuery
 ### Step 1, include the jQuery file on your HTML page using a new tag called:
-```HTML
+```xml
 &lt;script>
 ```
 
@@ -997,7 +999,7 @@ Open that file in a browser by double clicking it.
 <h2> Using jQuery </h2>
 <p> Open that SAME file in Sublime Text and locate the section of your html file called the <strong>head</strong> of the document.  it should look like this: </p>
 
-<pre><code class="HTML">&lt;head>
+<pre><code class="xml">&lt;head>
   &lt;title>Ladies Learning Code HTML and CSS&lt;/title>
   &lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   &lt;link rel="stylesheet" href="normalize.css" />
@@ -1006,7 +1008,7 @@ Open that file in a browser by double clicking it.
   &lt;!-- Your jQuery code will go here. -->
 &lt;/head> </code></pre>
 <p> Inside the head tag put in the following new tag. <small>(Right where the comment says to put it!)</small> </p>
-<pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+<pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 </code></pre>
 <p>Pro Tip: There is another file called snippets.txt in the example-1 folder.  you can copy and paste from there.</p>
 				</section>
@@ -1141,11 +1143,11 @@ Go back to that folder on the desktop and open up the <code>example-2</code> fol
 <a href="examples/example-2/index.html" target="_blank">open the <strong>index.html</strong> file</a> in both chrome and sublime text.  Now we can make edits to the file and then refresh the browser to see the updates.  Look in sublime text for the part in the code that looks like this:
 </p>
 
-<pre><code class="html">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+<pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;!-- Your jQuery code will go here. -->
 </code></pre>
 <p>That is where we are going to write our jQuery.  We're going to add a new <strong>script</strong> tag there. Update the page so it looks like this:</p>
-<pre><code class="html">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+<pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script&gt;
 	 /* Your jQuery code will go here. */
 &lt;&#47;&#115;cript&gt;
@@ -1165,7 +1167,7 @@ $("p.highlight").css("background-color", "yellow");
 ```
 and then later in the page you put
 
-```html
+```xml
 &lt;p class="highlight">This is an important highlighted paragraph&lt;/p>
 ```
 The javascript code will run BEFORE the browser will even see the paragraph tag.  That means that jQuery won't match the element and won't make it's background color yellow!
@@ -1186,13 +1188,13 @@ Document Ready is a little bit of a complex idea and again because we only have 
 				</section>
 				<section class="slide">
 <p> Now take the part of our html page where it says: </p>
-<pre><code class="html">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+<pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script&gt;
 	/* Your jQuery code will go here. */
 &lt;&#47;&#115;cript&gt;
 </code></pre>
 <p>and <strong> make it </strong> say this:</p>
-<pre><code class="html">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+<pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script&gt;
 $(document).ready(function(){
 	// Add all jQuery code here.
@@ -1201,7 +1203,7 @@ $(document).ready(function(){
 </code></pre>
 
 <p>That area is where we will add ALL of our jQuery code going forward.  When I say "Add this code to your document ready function" that is where I mean.</p>
-<pre><code class="html">&lt;script&gt;
+<pre><code class="xml">&lt;script&gt;
 $(document).ready(function(){
 	// Right Here. Your code goes Right here.
 });
@@ -1220,7 +1222,7 @@ Let's have some fun with those!
 
 The HTML for that section looks like this:
 
-```html
+```xml
 &lt;section id="favourites" class="favourites box">
 	&lt;h2>My Favourite Things&lt;/h2>
 	&lt;h3>Here are a few things I really love&lt;/h3>
@@ -1236,7 +1238,7 @@ So how would we **select** those images with jQuery?
 
 The HTML for that section looks like this:
 
-```html
+```xml
 &lt;section id="favourites" class="favourites box">
 	&lt;h2>My Favourite Things&lt;/h2>
 	&lt;h3>Here are a few things I really love&lt;/h3>
@@ -1474,7 +1476,7 @@ Some examples of jQuery plugins are
 
 At it's most basic, a rotator is a list of images that uses javascript to show one image on its own, then another, then another...  SO if we used HTML like this:
 
-```html
+```xml
 &lt;div id="rotator">
 	&lt;ul class="slides">
 		&lt;li>&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/li>
@@ -1513,12 +1515,12 @@ Go to your <strong> index.html </strong> file on your project in <strong> sublim
 </p>
 
 
-<pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt; </code></pre>
+<pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt; </code></pre>
 
 <p>
 	and we are going to put some new code after that so that it looks like this instead:
 </p>
-<pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+<pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script src="js/flexslider/jquery.flexslider-min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;link rel="stylesheet" href="js/flexslider/flexslider.css" />
 &lt;script&gt;
@@ -1530,15 +1532,15 @@ $(document).ready(function(){
 				</section>
 				<section class="slide"> 
 <p>notice the addition of the lines:</p>
-<pre><code class="HTML">&lt;script src="js/flexslider/jquery.flexslider-min.js"&gt;&lt;&#47;&#115;cript&gt;
+<pre><code class="xml">&lt;script src="js/flexslider/jquery.flexslider-min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;link rel="stylesheet" href="js/flexslider/flexslider.css" />
 </code></pre>
 <p> in between: </p>
-<pre><code class="HTML">&lt;script src="js/flexslider/jquery.flexslider-min.js"&gt;&lt;&#47;&#115;cript&gt;</code></pre>
+<pre><code class="xml">&lt;script src="js/flexslider/jquery.flexslider-min.js"&gt;&lt;&#47;&#115;cript&gt;</code></pre>
 
 <p> and: </p>
 
-<pre><code class="HTML">&lt;script&gt;
+<pre><code class="xml">&lt;script&gt;
 $(document).ready(function(){
 	// Add all jQuery code here.
 });
@@ -1546,7 +1548,7 @@ $(document).ready(function(){
 </code></pre>
 </section><section class="slide">
 <p> It should look like this: </p>
-<pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+<pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script src="js/flexslider/jquery.flexslider-min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;link rel="stylesheet" href="js/flexslider/flexslider.css" />
 &lt;script&gt;
@@ -1584,7 +1586,7 @@ I will give example **HTML**, **CSS**, **JavaScript** and **jQuery** code but yo
 
 <p> The <strong> HTML </strong> </p>
 
-<pre><code class="html">&lt;section id="rotator" class="rotator box">
+<pre><code class="xml">&lt;section id="rotator" class="rotator box">
   &lt;div class="flexslider">
 	&lt;ul class="slides">
 	  &lt;li>
@@ -1612,7 +1614,7 @@ I will give example **HTML**, **CSS**, **JavaScript** and **jQuery** code but yo
 * Edit the **alt** attribute of each image to write a description of that image
 * Edit the captions as you like
 	* If you do not want captions delete the line 
-```html
+```xml
 &lt;div class="flex-caption">&lt;p>Slide Caption 1&lt;/p>&lt;/div>
 ``` 
 from each slide you don't want captions on.
@@ -1686,12 +1688,12 @@ Reload that.  Do you notice a difference?
 ```javascript
 	$('.flexslider').flexslider({ slideshowSpeed : 2000 });
 //  |      |             |     ||       |            |  |└ End Parenthesis
-//  |      |             |     ||       |            |  └ End Curly Brackets
+//  |      |             |     ||       |            |  └ End Curly Braces
 //  |      |             |     ||       |            └ The property has
 //  |      |             |     ||       |               a VALUE of 2000
 //  |      |             |     ||       └ Set the object PROPERTY
 //  |      |             |     ||         'slideshowSpeed'
-//  |      |             |     |└ Curly brackets indicate a JavaScript OBJECT
+//  |      |             |     |└ Curly braces indicate a JavaScript OBJECT
 //  |      |             |     └ Parenthesis indicate a Function Call
 //  |      |             └ The Flexslider Method 
 //  |      └ The CSS selector '.flexslider' will add any items
@@ -1711,6 +1713,11 @@ Flexslider comes out of the box with the ability to be responsive.  Try it now. 
 #### Pro Tip:
 
 Make your images only as wide as they NEED to be.  That is, the largest size that you will need in your design.  They will automatically scale down as needed, but if you make them larger then they need to be the file size will be larger and your page will download slower.
+				</section>
+				<section class="slide" data-markdown>
+## Working Demo
+
+[Have a look here to see my page I made for my dog Phoenix.](examples/example-4/index.html) 
 				</section>
 				<section class="slide" data-markdown>
 ## Ok we are done now!
@@ -1745,7 +1752,7 @@ Boom!  impartial.
 ## Clickable Slides
 
 It is super simple to make your slides able to link to another page, or even another section on the same page.  Let's look at the HTML we are using now:
-```html
+```xml
 &lt;div id="rotator">
 	&lt;ul class="slides">
 		&lt;li>&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/li>
@@ -1756,7 +1763,7 @@ It is super simple to make your slides able to link to another page, or even ano
 ```
 Now let's just wrap those images in links using the ```&lt;a>``` tag in **HTML**
 
-```html
+```xml
 &lt;div id="rotator">
 	&lt;ul class="slides">
 		&lt;li>&lt;a href="#section1">&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/a>&lt;/li>
@@ -1772,7 +1779,7 @@ Now let's just wrap those images in links using the ```&lt;a>``` tag in **HTML**
 ## Something that's not an image?
 
 Flexslider works by rotating between slides *regardless of their content*. So you could easily do something like this:
-```html
+```xml
 &lt;div id="rotator">
 	&lt;ul class="slides">
 		&lt;li>&lt;p>Lorem ipsum dolor sit amet&lt;/p>&lt;/li>
@@ -1783,11 +1790,39 @@ Flexslider works by rotating between slides *regardless of their content*. So yo
 ```
 				</section>
 				<section class="slide" data-markdown>
+## What ELSE can we do?
+
+jQuery is an amazing javascript library.  It is however still just javascript.  This means that we can write any javascript we like is and around all of your jquery code. Let's take a minute an talk about javascript on it's own.  
+
+We've talked about how javascript has variables and functions.  We even mentioned briefly that it has **control structures** such as **if statements** and **loops**.
+
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
 ## Thank You.
 
 for your time and attention.  We have covered a lot here in our exercise of the mind.  If you have any questions or comments feel free to [hit me up on twitter](http://twitter.com/arrongibson), or [email me](mailto:Arron@InfinityMedia.ca?subject=Hackapalooza+Help).
 
 We will take the rest of the time to work with you on your projects and make sure that we are all comfortable with what we have just learned.
+		
+Slidedecks created with [Lea Verou's CSS-based SlideShow System](https://github.com/LeaVerou/csss) and [reveal.js](http://lab.hakim.se/reveal-js/).
 				</section>
 
 
@@ -1801,12 +1836,6 @@ We will take the rest of the time to work with you on your projects and make sur
 
 	</section><!-- cls main section -->
 
-	<!-- Last slide -->
-	<footer class="slide">
-		<h2>Thank you!</h2>
-		<p>Closing remarks</p>
-		<p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
-	</footer>
 
 
 	<script src="slideshow.js"></script>

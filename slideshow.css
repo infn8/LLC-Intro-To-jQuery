@@ -351,3 +351,7 @@ iframe.csss-import.show {
 .presenter .slide:target > .presenter-notes {
 	display: block;
 }
+strong, b{
+	white-space: nowrap;
+	/* Stop Line Breaks for Key Terms */
+}

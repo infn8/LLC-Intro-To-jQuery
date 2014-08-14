@@ -1120,6 +1120,36 @@ jQuery('.myClass');
 and that's just what we'll be doing going forward.
 
 
+				</section>
+				<section class="slide"> 
+
+
+
+
+<h2> Let's DO something already!!!
+</h2>
+<h3>
+	
+Ok let's get into it.  
+</h3>
+<p>
+	
+Go back to that folder on the desktop and open up the <code>example-2</code> folder inside the <code>examples</code> folder.
+</p>
+<p>
+	
+<a href="examples/example-2/index.html" target="_blank">open the <strong>index.html</strong> file</a> in both chrome and sublime text.  Now we can make edits to the file and then refresh the browser to see the updates.  Look in sublime text for the part in the code that looks like this:
+</p>
+
+<pre><code class="html">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+&lt;!-- Your jQuery code will go here. -->
+</code></pre>
+<p>That is where we are going to write our jQuery.  We're going to add a new <strong>script</strong> tag there. Update the page so it looks like this:</p>
+<pre><code class="html">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+&lt;script&gt;
+	 /* Your jQuery code will go here. */
+&lt;&#47;&#115;cript&gt;
+</code></pre>
 
 				</section>
 
@@ -1128,9 +1158,7 @@ and that's just what we'll be doing going forward.
 
 
 				<section class="slide" data-markdown> 
-## One last thing before we get into it the rotator.
-
-### Timing.
+## Timing.
 
 Your webpage, like all webpages, gets downloaded by the browser.  The browser downloads the page from top to bottom and when it see any javascript, it runs it.  Right then and there.  So if you add this:
 ```javascript 
@@ -1158,11 +1186,15 @@ $(document).ready(function(){
 Document Ready is a little bit of a complex idea and again because we only have a small amount of time we won't explain how it works in great detail here.  Just trust me, you need it if you want your code to work. 
 				</section>
 				<section class="slide">
-<p> Go to your project in your text editor and find where we added the following line: </p>
-<pre><code class="HTML">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+<p> Now take the part of our html page where it says: </p>
+<pre><code class="html">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+&lt;script&gt;
+	/* Your jQuery code will go here. */
+&lt;&#47;&#115;cript&gt;
 </code></pre>
-<p>and <strong> after that </strong> add this:</p>
-<pre><code class="HTML">&lt;script&gt;
+<p>and <strong> make it </strong> say this:</p>
+<pre><code class="html">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
+&lt;script&gt;
 $(document).ready(function(){
 	// Add all jQuery code here.
 });
@@ -1170,12 +1202,119 @@ $(document).ready(function(){
 </code></pre>
 
 <p>That area is where we will add ALL of our jQuery code going forward.  When I say "Add this code to your document ready function" that is where I mean.</p>
-<pre><code class="HTML">&lt;script&gt;
+<pre><code class="html">&lt;script&gt;
 $(document).ready(function(){
-	// Right Here. your code goes right here.
+	// Right Here. Your code goes Right here.
 });
 &lt;&#47;&#115;cript&gt;
 </code></pre>
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+
+On the example page we have a section at the bottom where there are 4 pictures of my dog Phoenix.
+
+![She is a Nova Scotia Duck Tolling Retreiver](img/Screen-Shot-1.png)
+
+Let's add some hover and click functions to those!
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+
+The HTML for that section looks like this:
+
+```html
+&lt;section id="favourites" class="favourites box">
+	&lt;h2>My Favourite Things&lt;/h2>
+	&lt;h3>Here are a few things I really love&lt;/h3>
+	&lt;img class="favourite" src="images/puppy_rest.jpg">
+	&lt;img class="favourite" src="images/puppy_rest.jpg">
+	&lt;img class="favourite" src="images/puppy_rest.jpg">
+	&lt;img class="favourite" src="images/puppy_rest.jpg">
+&lt;/section>
+```
+So how would we **select** those images with jQuery?
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+
+The HTML for that section looks like this:
+
+```html
+&lt;section id="favourites" class="favourites box">
+	&lt;h2>My Favourite Things&lt;/h2>
+	&lt;h3>Here are a few things I really love&lt;/h3>
+	&lt;img class="favourite" src="images/puppy_rest.jpg">
+	&lt;img class="favourite" src="images/puppy_rest.jpg">
+	&lt;img class="favourite" src="images/puppy_rest.jpg">
+	&lt;img class="favourite" src="images/puppy_rest.jpg">
+&lt;/section>
+```
+So how would we **select** those images with jQuery? How about this?
+```javascript
+$("#favourites img");
+```
+Yep that would do it.
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+
+Now let's try changing their size.  Put this in your **document ready** event:
+```javascript
+$("#favourites img").width(100);
+```
+
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+				</section>
+				<section class="slide" data-markdown>
+## Hover and Click Events
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
+				</section>
+				<section class="slide" data-markdown>
+## Title
 				</section>
 				<section class="slide" data-markdown>
 ## Finally...

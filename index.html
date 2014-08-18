@@ -58,7 +58,7 @@
 			</h1>
 
 			<img class="instructor-img" src="img/arron-gibson.jpg" alt="arron gibson">
-			<h2><span>with</span> Arron Gibson  <small> Director of Digital Projects @ <a style="color:#00afea" href="http://vivaandco.com" target="_blank"> Viva &amp; Co. </a></small> </h2>
+			<h2><span>with</span> Arron Gibson  <small> <br>Director of Digital Projects @ <a style="color:#00afea" href="http://vivaandco.com" target="_blank"> Viva &amp; Co. </a></small> </h2>
 			<ul>
 				<li><i class="fa fa-envelope"></i><a href="mailto:arron@vivaandco.com">arron@vivaandco.com</li>
 				<li><i class="fa fa-desktop"></i><a href="http://arrongibson.com" target="_blank">arrongibson.com</a></li>
@@ -1688,16 +1688,24 @@ Reload that.  Do you notice a difference?
 ```javascript
 	$('.flexslider').flexslider({ slideshowSpeed : 2000 });
 //  |      |             |     ||       |            |  |└ End Parenthesis
+//  |      |             |     ||       |            |  |
 //  |      |             |     ||       |            |  └ End Curly Braces
+//  |      |             |     ||       |            |
 //  |      |             |     ||       |            └ The property has
 //  |      |             |     ||       |               a VALUE of 2000
+//  |      |             |     ||       |
 //  |      |             |     ||       └ Set the object PROPERTY
 //  |      |             |     ||         'slideshowSpeed'
+//  |      |             |     ||
 //  |      |             |     |└ Curly braces indicate a JavaScript OBJECT
+//  |      |             |     |
 //  |      |             |     └ Parenthesis indicate a Function Call
+//  |      |             | 
 //  |      |             └ The Flexslider Method 
+//  |      |
 //  |      └ The CSS selector '.flexslider' will add any items
 //  |          with the class 'flexslider' to the jQuery wrapped set 
+//  |
 //  └ The jQuery Function
 ```
 

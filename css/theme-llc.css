@@ -138,7 +138,8 @@ textarea.snippet {
     border-radius: 50%;
     width: 160px;
     float: left;
-    margin: 15px; }
+    margin: 15px 15px 60px; 
+  }
 
 /* highlight.js customizations
 -------------------------------*/

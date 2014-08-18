@@ -1,6 +1,6 @@
 # Making Sublime Text Awesome
 
-one of the great things about Sublime text it that you can add extra functionality to it with plugins.  There are MANY great plugins out there but because this is just a little extra we're only going to look at 2 of them.
+One of the great things about Sublime text it that you can add extra functionality to it with plugins.  There are MANY great plugins out there but because this is just a little extra we're only going to look at 2 of them.
 
 **Please Note:** If the workshop is already underway please do NOT do this now.  This is an extra for if you have a moment.  You can come back to this during a break or over the lunch hour.  It's much more important to listen to the workshop then do this stuff. 
 
@@ -19,8 +19,10 @@ This is a plugin that makes adding plugins easier.  We will add this plugin firs
 Emmet is an amazing plugin that makes working with HTML and CSS muuch more enjoyable by letting you learn a shorthand that sublime text will expand into the full text.  It's a "write less, do more" kind of thing.  Here's how to install it.
 
 * In sublime text open the Command Pallete:
-    * On a Mac you do this with <CMD> + <SHIFT> + <P> (⌘⇧P)
-    * On Windows you do this with <CTRL> + <SHIFT> + <P> (^⇧P)
+    * On a Mac you do this with 
+      * ```<CMD> + <SHIFT> + <P> (⌘⇧P)```
+    * On Windows you do this with 
+      * ```<CTRL> + <SHIFT> + <P> (^⇧P)```
 * This lets you run any command by typing the name of it.
 * To install a plugin type "Install Package" and press enter.
     * When the item that says **Package Control: Install Package** is highlighted that when you want to press enter

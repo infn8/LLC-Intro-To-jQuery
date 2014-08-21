@@ -9,17 +9,22 @@
 	<link href='http://fonts.googleapis.com/css?family=Quicksand|Montserrat:400,700|Pacifico' rel='stylesheet' type='text/css'>
 	-->
 	<!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
-	<link rel="stylesheet" href="slideshow.css">
-	<link rel="stylesheet" href="fonts/google-webfonts/stylesheet.css">
-	<link rel="stylesheet" href="css/font-awesome.css">
-	<link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
-	<link rel="stylesheet" href="css/theme-llc.css">
-	<!-- Workshop-specific styles 
+	<link rel="stylesheet" href="slideshow.css" />
+	<link rel="stylesheet" href="fonts/google-webfonts/stylesheet.css" />
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<link rel="stylesheet" href="css/highlightjs-themes/monokai.css" />
+	<link rel="stylesheet" href="css/theme-llc.css" />
+	<link rel="stylesheet" href="js/jqueryui/jquery-ui.min.css" />
+	<!-- Workshop-specific styles
 	<link href="css/workshop.css" rel="stylesheet">
 	-->
 	<!-- Takes care of CSS3 prefixes! -->
 	<script src="prefixfree.min.js"></script>
 	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/socket.io-client/socket.io.js"></script>
+	<script src="js/konami/konami.js"></script>
+	<script src="js/jqueryui/jquery-ui.min.js"></script>
+	<script src="js/sockets-app.js"></script>
 	<script>
 	$(document).ready(function() {
 		$('a[href^="#example"]').on('click', function(e){
@@ -1841,7 +1846,14 @@ Slidedecks created with [Lea Verou's CSS-based SlideShow System](https://github.
 
 
 
-			<p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+			<p class="instructions">
+				Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate
+				<span class="controls" style="float:right">
+					<button class="minus-button" title="Use this button to indicate that you're not clear on what's covered in this section"><span class="fa fa-thumbs-o-up fa-rotate-180"></span></button>
+					<button class="watch-button" title="Not Following. There is no connection to an instructor.  Observation Mode Disabled" disabled><span class="fa fa-eye-slash"></span></button>
+					<button class="plus-button" title="Use this button to indicate that you understand this section"><span class="fa fa-thumbs-o-up"></span></button>
+				</span>
+			</p>
 	  
 
 	</section><!-- cls main section -->

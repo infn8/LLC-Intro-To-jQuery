@@ -7,14 +7,14 @@
 /**
  * Make the environment a bit friendlier
  */
-function $(expr, con) { return typeof expr === 'string'? (con || document).querySelector(expr) : expr; }
-function $$(expr, con) { return [].slice.call((con || document).querySelectorAll(expr)); }
+function $slide(expr, con) { return typeof expr === 'string'? (con || document).querySelector(expr) : expr; }
+function $$slide(expr, con) { return [].slice.call((con || document).querySelectorAll(expr)); }
 
 (function(head, body, html){
 
 // Check for classList support and include the polyfill if it's not supported
 if(!('classList' in body)) {
-	var thisScript = $('script[src$="slideshow.js"]'),
+	var thisScript = $slide('script[src$="slideshow.js"]'),
 	    script = document.createElement('script');
 	    script.src = thisScript.src.replace(/\bslideshow\.js/, 'classList.js');
 	thisScript.parentNode.insertBefore(script, thisScript);
@@ -99,7 +99,7 @@ var _ = window.SlideShow = function(slide) {
 	document.body.appendChild(onscreen);
 	
 	// Expand multiple imported slides
-	$$('.slide[data-base][data-src*=" "]').forEach(function(slide) {
+	$$slide('.slide[data-base][data-src*=" "]').forEach(function(slide) {
 		var hashes = slide.getAttribute('data-src').split(/\s+/).forEach(function (hash) {
 			var s = slide.cloneNode(true);
 			s.setAttribute('data-src', hash);
@@ -110,7 +110,7 @@ var _ = window.SlideShow = function(slide) {
 	});
 
 	// Get the slide elements into an array
-	this.slides = $$('.slide', body);
+	this.slides = $$slide('.slide', body);
 
 	// Get the overview
 	this.overview = function(evt) {
@@ -146,7 +146,7 @@ var _ = window.SlideShow = function(slide) {
     }
     
     // Process iframe slides
-	$$('.slide[data-src]:not([data-base]):empty').forEach(function(slide) {
+	$$slide('.slide[data-src]:not([data-base]):empty').forEach(function(slide) {
 		var iframe = document.createElement('iframe');
 
 		iframe.setAttribute('data-src', slide.getAttribute('data-src'));
@@ -155,7 +155,7 @@ var _ = window.SlideShow = function(slide) {
 		slide.appendChild(iframe);
 	});
 
-	$$('.slide > iframe:only-child').forEach(function(iframe) {
+	$$slide('.slide > iframe:only-child').forEach(function(iframe) {
 		var slide = iframe.parentNode,
 			src = iframe.src || iframe.getAttribute('data-src');
 
@@ -184,7 +184,7 @@ var _ = window.SlideShow = function(slide) {
 		// Set data-title attribute to the title of the slide
 		if(!slide.title) {
 			// no title attribute, fetch title from heading(s)
-			var heading = $('hgroup', slide) || $('h1,h2,h3,h4,h5,h6', slide);
+			var heading = $slide('hgroup', slide) || $slide('h1,h2,h3,h4,h5,h6', slide);
 
 			if(heading && heading.textContent.trim()) {
 				slide.setAttribute('data-title', heading.textContent);
@@ -205,7 +205,7 @@ var _ = window.SlideShow = function(slide) {
 		
 		// [data-steps] can be used to define steps (applied through the data-step
 		// property), used in CSS to go through multiple states for an element
-		var stepped = $$('[data-steps]', slide);
+		var stepped = $$slide('[data-steps]', slide);
 		
 		if (slide.hasAttribute('data-steps')) {
 			stepped.push(slide);
@@ -252,10 +252,10 @@ var _ = window.SlideShow = function(slide) {
 	document.addEventListener('keyup', this, false);
 	document.addEventListener('keydown', this, false);
 	
-	$$('link[rel~="csss-import"]').forEach(function (link) {
+	$$slide('link[rel~="csss-import"]').forEach(function (link) {
 		var url = link.href;
 		var id = link.id;
-		var slides = $$('.slide[data-base="' + id + '"][data-src^="#"]');
+		var slides = $$slide('.slide[data-base="' + id + '"][data-src^="#"]');
 		var isSlideshow = link.rel.indexOf('slides') > -1;
 		
 		if (slides.length) {
@@ -470,7 +470,7 @@ _.prototype = {
 	},
 
 	getSlideById: function(id) {
-		return $('.slide#' + id);
+		return $slide('.slide#' + id);
 	},
 
 	/**
@@ -508,7 +508,7 @@ _.prototype = {
 			document.title = slide.getAttribute('data-title') || documentTitle;
 
 			if (slide.classList.contains('iframe')) {
-				var iframe = $('iframe', slide), src;
+				var iframe = $slide('iframe', slide), src;
 
 				if(iframe && !iframe.hasAttribute('src') && (src = iframe.getAttribute('data-src'))) {
 					iframe.setAttribute('src', src);
@@ -518,15 +518,15 @@ _.prototype = {
 				this.adjustFontSize();
 			}
 			
-			$('#onscreen-nav').style.display = this.isIpad || slide.classList.contains('onscreen-nav')? '' : 'none';
+			$slide('#onscreen-nav').style.display = this.isIpad || slide.classList.contains('onscreen-nav')? '' : 'none';
 			
 			// Hide iframes from CSSS imports
-			$$('iframe.csss-import').forEach(function (iframe) { iframe.classList.remove('show'); });
+			$$slide('iframe.csss-import').forEach(function (iframe) { iframe.classList.remove('show'); });
 
 			this.indicator.textContent = this.index + 1;
 
 			// Update items collection
-			this.items = $$('.delayed, .delayed-children > *', this.slides[this.slide]);
+			this.items = $$slide('.delayed, .delayed-children > *', this.slides[this.slide]);
 			this.items.stableSort(function(a, b){
 				return (a.getAttribute('data-index') || 0) - (b.getAttribute('data-index') || 0)
 			});
@@ -710,7 +710,7 @@ _.getSlide = function(element) {
 // Rudimentary style[scoped] polyfill
 if (!('scoped' in document.createElement('style'))) {
 	addEventListener('load', function(){ // no idea why the timeout is needed
-		$$('style[scoped]').forEach(function(style) {
+		$$slide('style[scoped]').forEach(function(style) {
 			var rulez = style.sheet.cssRules,
 				parentid = style.parentNode.id || SlideShow.getSlide(style).id || style.parentNode.parentNode.id;
 	

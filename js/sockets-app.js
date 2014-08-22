@@ -8,16 +8,26 @@
 $(document).ready(function() {
   
   $('.plus-button').click(function(){
-    socket.emit('vote', { qty: 1 });
+    socket.emit('vote', { hash: window.location.hash, qty: 1 });
   });
   $('.minus-button').click(function(){
-    socket.emit('vote', { qty: -1 });
+    socket.emit('vote', { hash: window.location.hash, qty: -1 });
   });
   socket.on('admin-login', function(result){
     if(result.admin){
       window.isAdmin = true;
       $('#socket-message').text("You are logged in as Admin");
     }
+  });
+  socket.on('client-login', function(result){
+    if(result.connected){
+      $('.controls button').removeAttr('disabled');
+      setWatched(true);
+    }
+  });
+  socket.on('disconnect', function(result){
+      $('.controls button').attr('disabled', 'disabled');
+      setWatched(false);
   });
   $(window).on('hashchange', function(event) {
     if(isAdmin){
@@ -50,3 +60,15 @@ $(document).ready(function() {
     /* Act on the event */
   });
 });
+
+function setWatched(state){
+  var btn = $(".watch-button");
+  var icon = btn.find('.fa');
+  if(state){
+    btn.data('watching', true).attr('Title', 'Observation Mode On:  Click this button to turn off');
+    icon.removeClass('fa-eye-slash').addClass('fa-eye');
+  } else {
+    btn.data('watching', false).attr('Title', 'Observation Mode Off:  Click this button to turn on');
+    icon.removeClass('fa-eye').addClass('fa-eye-slash');
+  }
+}

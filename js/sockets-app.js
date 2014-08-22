@@ -1,4 +1,4 @@
-  var host;
+  var host, dialog;
   var isAdmin = false;
   host = "http://infn8-sockets.nodejitsu.com/";
   if(window.location.hostname == "jquery.local" || window.location.hostname == "infinibook.local"){
@@ -6,12 +6,16 @@
   }
   var socket = io(host);
 $(document).ready(function() {
-  
-  $('.plus-button').click(function(){
+  $('body').on('click', '.plus-button', function(){
     socket.emit('vote', { hash: window.location.hash, qty: 1 });
+    $(".ui-dialog-content").dialog("close");
   });
-  $('.minus-button').click(function(){
+  $('body').on('click', '.minus-button', function(){
     socket.emit('vote', { hash: window.location.hash, qty: -1 });
+    $(".ui-dialog-content").dialog("close");
+  });
+  $('body').on('click', '.watch-button', function(){
+    setWatched(!$(this).data('watching'));
   });
   socket.on('admin-login', function(result){
     if(result.admin){
@@ -35,9 +39,25 @@ $(document).ready(function() {
     }
   });
   socket.on('client-hashchange', function(newHash){
-    if(isAdmin != true){
-      // TODO:  check if opted out of follow mode
+    if(isAdmin != true && $('.watch-button').data('watching')){
       window.location.hash = newHash;
+    }
+  });
+  socket.on('pulse-check', function(pulse){
+    if(isAdmin != true){
+    dialog = $('<div><h3>Do you understand what is being discussed?</h3><p><button class="minus-button"><span class="fa fa-thumbs-o-up fa-rotate-180"></span></button> <button class="plus-button"><span class="fa fa-thumbs-o-up"></span></button></p></div>').dialog({
+      modal:true,
+      title:'Pulse Check!',
+      width: 700,
+      height : 600,
+      autoOpen : false,
+      open: function(){
+        $('.ui-dialog-titlebar-close').trigger('focus');
+        
+      }
+    });
+    dialog.dialog('open');
+        $('.ui-dialog-titlebar-close').trigger('focus');
     }
   });
   $(window).konami(function(){ 

@@ -7,7 +7,6 @@
 			var kkeys = [];
 			$(this).keydown(function(e){
 				kkeys.push( e.keyCode );
-				console.log(e);
 				while (kkeys.length > code.split(',').length) {
 					kkeys.shift();
 				}

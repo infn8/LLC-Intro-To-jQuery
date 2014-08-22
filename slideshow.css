@@ -363,3 +363,9 @@ strong, b{
 }
 
 
+.ui-dialog-content{
+	text-align: center;
+}
+.ui-widget .ui-dialog-content button{
+	font-size: 2em;
+}
